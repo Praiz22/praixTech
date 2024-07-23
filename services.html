@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our professional software development and graphics design services tailored to meet your needs.">
+    <link rel="canonical" href="https://praixTech.netlify.app/services">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="refresh" content="20">
+    <link rel="icon" href="praixTech.png">
+    <title>praixTECH-Design Services</title></head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cont{
+            
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            max-width: 50%;
+            position: relative;
+            margin-right: 40%;
+            margin: auto;
+          }
+          .cont img {
+            height: auto;
+            width: 50%; 
+            max-width: 60%; 
+          }
+          .header-text {
+            font-size: 1.3rem;
+            margin-left: 1rem; 
+            
+            font-size: calc(1.3rem + 0.5vw); 
+          }
+          
+          @media only screen and (max-width: 768px) {
+            .header-text {
+              font-size: 1.2rem;
+            }
+          }
+        .ham{
+            margin-right: 7px;
+            width: 40px;
+            height: 40px;
+        }
+        .burger{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 40%;
+        }
+       
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .director-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            width: 60%;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+        @media (min-width: 600px) {
+            .director-section {
+                flex: 0 0 calc(100% - 100px);
+            }
+        }
+        
+        @media (min-width: 900px) {
+            .director-section {
+                flex: 0 0 calc(33.333% - 20px); 
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .director-section {
+                flex: 0 0 calc(25% - 20px); 
+            }
+        }
+        .top-button {
+            background-color: #ff7300; 
+            border: none; 
+            color: white; 
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer; 
+            border-radius: 5px;
+            margin: 0 5px; 
+            transition: background-color 0.3s; 
+          }
+          
+          .top-button:hover {
+            background-color: #45a049; 
+          }
+        .text {
+            font-size: 1em;
+            font-family: 'lato';
+            color: #000000;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: popUp 3.0s ease-out forwards;
+            max-width: 100%;
+            justify-content: flex-end;
+          }
+          @keyframes popUp {
+            from {
+              opacity: 0;
+              transform: scale(0.8);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        
+        .middler {
+            width: 100%;
+            display: flex;
+            background-color: #333;
+            justify-content: center;
+            align-items: center; 
+            padding: 10px; 
+        }
+
+        .middler .logo {
+            margin-right: 20px; 
+        }
+
+        @media (max-width: 599px) {
+            .logo img {
+                width: 50px; 
+            }
+        }
+
+        @media (min-width: 600px) and (max-width: 1199px) {
+            .logo img {
+                width: 75px; 
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .logo img {
+                width: 100px; 
+            }
+        }
+        .middler-text {
+            font-size: 1.3rem;
+            margin-left: 1rem; 
+            color: #ffffff;
+            font-family: lora;
+            
+            font-size: calc(1.3rem + 0.5vw); 
+          }
+          
+          @media only screen and (max-width: 768px) {
+            .middler-text {
+              font-size: 1.2rem;
+            }
+          }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding-left: 20px;
+            padding-right: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .item {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover img {
+            transform: scale(1.1);
+        }
+
+        .item h3, .item p {
+            position: relative;
+            margin: 0.5rem 0;
+        }
+        .bn632-hover {
+            width: 300px;
+            font-size: 16px;
+            font-weight: 200;
+            color: #fff;
+            cursor: pointer;
+            margin: 20px;
+            height: 55px;
+            text-align:center;
+            border: none;
+            background-size: 300% 100%;
+            border-radius: 10px;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+          }
+          
+          .bn632-hover:hover {
+            background-position: 100% 0;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+          }
+          
+          .bn632-hover:focus {
+            outline: none;
+          }
+          
+          .bn632-hover.bn19 {
+            background-image: linear-gradient(
+              to right,
+              #f5ce62,
+              #e43603,
+              #fa7199,
+              #e85a19
+            );
+            box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+          }
+          
+         
+        .bn8 {
+            background-color: rgb(255, 255, 255);
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 12px 16px;
+            font-size: 16px;
+            font-family: "Roboto", sans-serif;
+            cursor: pointer;
+          }
+          .bottom-button-container {
+            background-color: #121518;
+            text-align: center;
+            padding: 10px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+        }
+        .bottom-button-container img {
+            max-width: 100px;
+        }
+        .list-style {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .list-style li {
+            margin: 5px 0;
+        }
+        .list-style .praix {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-family: Geo Slab BT;
+        }
+        .praixis{
+            text-decoration: none;
+            color:#fc6f2e;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        .vertical-line {
+            width: 1px; 
+            background-color: #333; 
+            height: 100px; 
+            margin: 0 20px; 
+        }
+        .nav-contact{
+            display: flex;
+            gap: 20px;
+            margin-top: 70px;
+            margin-right: 80%;
+            margin-left: 30px;
+            justify-content: center;
+            list-style-type: none;
+        }
+        .nav-contact .text{
+            color: #ffffff;
+            list-style-type: none;
+            text-decoration: none;
+            font-family: calibri;
+        }
+        .dropdown-menu {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropbtn {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          .dropdown-content a:hover {
+            background-color: #ddd;
+          }
+          
+          .dropdown-menu:hover .dropdown-content {
+            display: block;
+          }
+        
+    </style>
+    <body>
+            <header>
+                <div class="cont">
+                    <img src="praixTech.png" alt="Logo" ></div>
+                    <div class="burger"> 
+                        <span class="header-text">Our Services</span>
+             <nav class="dropdown-menu">
+           <button class="dropbtn"><img src="hamburger.png" class="ham"></button>
+                <div class="dropdown-content">
+                <a href="#Graphic">Graphics</a>
+                <a href="#Product">Product Design</a>
+                <a href="#Digital">Digital Marketing</a>
+                <a href="#Web">Web Design</a>
+                <a href="index.html">Return Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                </div></div>
+          </nav>
+        
+                   </nav>
+                 
+            </header>
+            <div class="container">
+                <div class="director-section">
+                    <img src="mock.png">
+                    <div class="director-info"></div>
+                    <h3 style="color: #000000;">GRAPHIC DESIGN</h3>
+                    <p class="text">Logos, brand identity, print design(business cards, flyers), and
+                        digital design (social media graphics, banners).
+                    </p>
+                <a href="#Graphic"><button class="top-button"> Learn More</button></a>
+                </div>
+                <div class="director-section">
+                    <img src="prodcutD.jpg">
+                    <div class="director-info"></div>
+                    <h3 style="color: #000000;">PRODUCT DESIGN</h3>
+                    <p class="text">Concept development, prototyping, and user-centering
+                        design for physical and digital products
+                    </p>
+                    <a href="#Product"><button class="top-button"> Learn More</button></a></div>
+                <div class="director-section">
+                        <img src="onlineA.jpg">
+                        <div class="director-info"></div>
+                        <h3 style="color: #000000;">ONLINE MARKETING</h3>
+                        <p class="text">Social Media Management, email marketing, and PPC advertising
+                        </p>
+                        <a href="#Digital"><button class="top-button"> Learn More</button></a></div>
+                <div class="director-section">
+                    <img src="web.jpg">
+                    <div class="director-info"></div>
+                    <h3 style="color: #000000;">WEB DEVELOPMENT and SEO SERVICES</h3>
+                    <p class="text">Custom Websites, E-commerce solutions, responsive 
+                        design and Maintenance, On page and Off Page SEO, Keyword optimization, and SEO audits
+                    </p>
+                    <a href="#Web"><button class="top-button"> Learn More</button></a></div>
+                <div class="director-section">
+                    <img src="mybook.jpg">
+                    <div class="director-info"></div>
+                    <h3 style="color: #000000;">CONTENT CREATION</h3>
+                    <p class="text">Copy writing, blog writing, and multimedia production
+                    </p></div>
+                <div class="director-section">
+                    <img src="search.png">
+                    <div class="director-info"></div>
+                    <h3 style="color: #000000;">PROJECT AND RESEARCH</h3>
+                    <p class="text">Project management, Prototyping, editing, printing and Binding
+                    </p></div></div>
+            </div><hr>
+<section id="Graphic">
+<div class="middler">
+    <div class="cont">
+        <img src="praixTech.png" alt="Logo" ></div>
+    <div class="burger"> 
+        <span class="middler-text">Graphics Design Portfolio</span>
+</div></div>
+            <div class="gallery">
+                <div class="item">
+                    <img src="creative.png" alt="The Creative Magician">
+                    <h3>The Creative Magician</h3>
+                    <p>creativity beyond imagination</p>
+                </div>
+                <div class="item">
+                    <img src="frame.png" alt="General Design">
+                    <h3>General Design</h3>
+                    <p>For all sort of Designing and Product Visualization</p>
+                </div>
+                <div class="item">
+                    <img src="power.jpg" alt="chruch flyers">
+                    <h3>Church Program Design</h3>
+                    <p>Improve your church branding through powerful and spirit filled designs!</p>
+                </div>
+                <div class="item">
+                    <img src="palace.png" alt="party">
+                    <h3>Events Design</h3>
+                    <p>You Definitely need a vibrant deisgn if you want your friends to come for your party</p>
+                </div>
+                <div class="item">
+                    <img src="mybook.jpg" alt="book cover">
+                    <h3>Book Cover Design</h3>
+                    <p>we provide the ultimate theme for your book.</p>
+                </div>
+                <div class="item">
+                    <img src="brochure.png" alt="book">
+                    <h3>Book Cover</h3>
+                    <p>for your book and journals cover</p>
+                </div>
+                <div class="item">
+                    <img src="train.jpg" alt="Graphics Class">
+                    <h3>Graphics Training</h3>
+                    <p>Become a pro in graphics design through seamless and thorough training session</p>
+                </div>
+                <div class="item">
+                    <img src="hii.jpg" alt="graphics learning">
+                    <h3>GRAPHICS 101</h3>
+                    <p>A perfect guide for you as a beginner</p>
+                </div>
+                <div class="item">
+                    <img src="show.jpg" alt="party">
+                </div>
+                  
+                <div class="item">
+                    <img src="monday.jpg" alt="monday">
+                    <h3>Daily Posts</h3>
+                    <p>Inspire people through daily post</p>
+                </div>
+                <div class="item">
+                    <img src="branding.png" alt="branding">
+                    <h3>Create Unique Identity for your Business</h3>
+                    <p>make your business grow through our branding and product visualization</p>
+                </div>
+                <div class="item">
+                    <img src="sav.jpg" alt="printing">
+                    <h3>General Printing</h3>
+                    <p>Bringing your Designs to Life</p>
+                </div>
+                <div class="item">
+                    <img src="mom1.png" alt="birthday designs">
+                    <h3>Birthday Designs</h3>
+                    <p>Surprise your Loved ones with amazing designs</p>
+                </div>
+                <div class="item">
+                    <img src="mom2.png" alt="birthday designs">
+                    <h3> Birthday Cards and Gifts</h3>
+                </div>
+                <div class="item">
+                    <img src="daddy's birthday.jpg" alt="birthday">
+                    <h3>Birthday Frame</h3>
+                    <p>Get your best frame delivered through out south-west</p>
+                </div>
+                <div class="item">
+                    <img src="precious.png" alt="birthday designs">
+                    <h3>Congratulaory Designs</h3>
+                    <p>For your Jotters and Banners</p>
+                </div>
+                
+                <div class="item">
+                    <img src="childrens's day.jpg" alt="children's day">
+                    <h3>Seasonal Greetings</h3>
+                    <p>Reach out to customers and families with a heartfelt grettings designs</p>
+                </div>
+                <div class="item">
+                    <img src="mothers day.jpg" alt="mothers day">
+                </div>
+                <div class="item">
+                    <img src="e.jpg" alt="web design">
+                    <h3>Web Development</h3>
+                    <p>Expand your Horizon, connect with thousands of customers  </p>
+                </div>
+                <div class="item">
+                    <img src="f.jpg" alt="coding">
+                    <h3>Software Engineer</h3>
+                    <p>Lets Develop your dream software and website at shikini price</p>
+                </div>
+                <div class="item">
+                    <img src="mybook.jpg" alt="coding">
+                    <h3>Project Research</h3>
+                    <p>Strugling with your School Projects? don't panic, maintain the steeze we gat you covered!</p>
+                </div>
+                <div class="item">
+                    <img src="latter logo.png" alt="logo">
+                    <h3>Logo Design</h3>
+                    <p>A business without a logo is like a soldier without a gun, let help you design one to fore run your mission and vision</p>
+                </div>
+                <div class="item">
+                    <img src="life.jpg" alt="meme">
+                    <h3>Calming Pills</h3>
+                    <p>With great creativity, our services will Definitely bring a smile to your face</p>
+                </div>
+                <div class="item">
+                    <img src="later.png" alt="meme">
+                    <h3>TRY US NOW!!!</h3>
+                    <p>a trial will DEFINITELY convince you!</p>
+                </div>
+                <section class="cta">
+                    <a href="index.html"><button class="bn632-hover bn19">Click Here to Go back home</button></a>
+                </section>
+            </section>
+<section id="Product">
+    <div class="middler">
+        <div class="cont">
+            <img src="praixTech.png" alt="Logo" ></div>
+            <div class="burger"> 
+                <span class="middler-text">Our Product Design Services</span>
+    </div></div>
+            <div class="director-section">
+                <img src="prodcutD.jpg">
+                <div class="director-info"></div>
+                <h3 style="color: #000000;">PRODUCT DESIGN</h3>
+                <p class="text">Unlock the potential of your Ideas with our premier product design
+                    services. At praix Tech, we specialize in transforming concepts into innovative
+                    and market ready product.
+                </p></div>
+            <div class="director-section">
+                <img src="kolabo.jpg">
+                <div class="director-info"></div>
+                <h3 style="color: #000000;">What We Offer</h3>
+                <p class="text">User-Centric Research
+                    innovative Concept Development
+                    Detailed Design and Prototyping
+                    Visual and Interaction excellence
+                    Engineer and Production Support
+                    Rigorous Testing and Interaction
+                    Post-Launch Evaluation
+                </p></div>
+                <div class="director-section">
+                <img src="happy.png">
+                <div class="director-info"></div>
+                <h3 style="color: #000000;">Why Choose US?</h3>
+                <p class="text"><b>Enhanced User experience:</b>Our designs are tailored
+                    to meet user needs, ensuring satisfaction and loyalty<br>
+                    <b>Market Success:</b> Stand Out with Innovative and aesthetically
+                    pleasing products that capture attention and drive sales<br>
+                    <b>Efficiency and Cost Savings: </b> Benefits from streamlined production
+                    processes and reduced costs through our expert design and planning
+
+                </p></div>
+    </section>
+                    <section id="Digital">
+                       <div class="middler">
+    <div class="cont">
+        <img src="praixTech.png" alt="Logo" ></div>
+        <div class="burger"> 
+            <span class="middler-text">Online Marketing Services</span>
+</div></div>
+                        <div class="director-section">
+                            <img src="digitalM.jpg">
+                            <div class="director-info"></div>
+                            <h3 style="color: #000000;">DIGITAL MARKETING</h3>
+                            <p class="text">Elevate your business with our exceptional online
+                                market design services. At praixTECH, we specilize in creating
+                                and engaging and effective online market solutions that drive sales
+                                and enhance user experience. Our comprehensive approach ensures your
+                                online market standsout in a competitive landscape.
+                            </p></div>
+                        <div class="director-section">
+                            <img src="what.png">
+                            <div class="director-info"></div>
+                            <h3 style="color: #000000;">What We Offer</h3>
+                            <p class="text"><b>Comprehensive Market Research</b>
+                               Understand your audience and market trends. We conduct in-depth Research
+                               to tailor your online market to meet customer needs and preferences<br>
+                               <b>Strategic Concept Development : </b> From ideation to execution, we
+                               develop strategic concepts that are both innovative and practical.Our Processes includes
+                               brainstorming sessions, wireframing, and prototyping to refine ideas and ensure market readiness.<br>
+                               <b>Robust Design and Protyping: </b> Experience robust and visually appealing
+                               designs that attract and retain customers. We create detailed designs and prototypes
+                               to test functionality, usability , and aesthetics, making necessary adjustments for
+                               optimal performance<br>
+                               <b>Thorough Testing and Optimization: </b> Guarantee the success of your online market
+                               with rigorous testing and optimization. We conduct usability testing, performance Evaluation
+                               and continous improvement to enhance user experience and operational efficiency<br>
+                               <b>Post-Launch Analysis and Improvement: </b> Stay ahead with ongoing support and analysis.
+                               We monitor your online market's performance, gather user feedback, and implement updates to keep 
+                               your market competitive and effective
+                            </p></div>
+                            <div class="director-section">
+                            <img src="why.png">
+                            <div class="director-info"></div>
+                            <h3 style="color: #000000;">Why Choose US?</h3>
+                            <p class="text"><b>Enhanced User Engagement:</b>Our designs are crafted to captivate and retain
+                                users, ensuring a smooth and enjoyable shopping experience<br>
+                                <b>Increased Sales and Conversions :</b> Stand Out with Innovative and aesthetically
+                                pleasing products that capture attention and drive sales<br>
+                                <b>Efficiency and Cost Savings: </b> Benefits from streamlined production
+                                processes and reduced costs through our expert design and planning
+        
+                            </p></div>
+                            </section>
+            <section id="Web">
+                <div class="middler">
+                    <div class="cont">
+                        <img src="praixTech.png" alt="Logo" ></div>
+                        <div class="burger"> 
+                            <span class="middler-text">Cutting Edge Web Design Services</span>
+                </div></div>
+                                <div class="director-section">
+                                    <img src="web2.jpg">
+                                    <div class="director-info"></div>
+                                    <h3 style="color: #000000;">Web Design and Development</h3>
+                                    <p class="text">Transform your digital prescence with our exceptional web design services.
+                                        At praixTECH, we specialize in creating visually stunning, user-friendly websites that
+                                        drive engagement and conversions. Our tailored approach ensures your website not only 
+                                        look cool and great, but also performs optimally
+                                    </p></div>
+                                <div class="director-section">
+                                    <img src="what2.png">
+                                    <div class="director-info"></div>
+                                    <h3 style="color: #000000;">What We Offer</h3>
+                                    <p class="text"><b>Custom Web Design:</b> Stand out with a unique, sutom-designed website
+                                        that reflects your brand identity. We focus on creating visually appelaing layouts
+                                        that resonate with your target audience and enhance your online prescence<br>
+                                        develop strategic concepts that are both innovative and practical.Our Processes includes
+                                        brainstorming sessions, wireframing, and prototyping to refine ideas and ensure market readiness.<br>
+                                        <b>Robust Design and Protyping: </b> Experience robust and visually appealing
+                                        <b>Responsive Design : </b> Ensure a seamless experience across all devices. Our responsive
+                                       design approach guarantees your websites looks and functiions perfectly on desktops, tablets and 
+                                       smartphones<br>
+                                       <b>User Experience (UX) and User Interface (UI): </b> Create intuitive and engaging user experiences.
+                                       We priortize UX and UI design to ensure your website is easy to navigate, enhancing user satisfaction 
+                                       and retention<br>
+                                       <b>Technical Implementation an Support: </b> Benefit from flawless technical execution. We collaborate with 
+                                       developers to implement your design efficiently, ensuting your website is secure, fast, and scalable.<br>
+                                       <b>Ongoing Maintenance and Updates: </b> Keep your website up-to-date and running smoothly. We offer ongoing
+                                       maintenance and updates to ensure your website remains relevant and performs optimally
+                                       
+                                    </p></div>
+                                    <div class="director-section">
+                                    <img src="why.png">
+                                    <div class="director-info"></div>
+                                    <h3 style="color: #000000;">Why Choose US?</h3>
+                                    <p class="text"><b>Enhanced User Engagement:</b>Our custom designs ensure that your website stands out and makes a 
+                                        lasting impression.
+                                        <br>
+                                        <b>Improved User Engagement :</b> Intuitive UX/UI design keeps users engaged and encouraged repeats visits.<br>
+                                        <b>Optimal Performance: </b>Our technical expertise ensures your website is fast, secure and scalable.<br><br>
+                                        <i>Transform your online Prescence with praixTECH. Contact us today to create a website that not
+                                            only look amazing but also delivers exceptional performance
+                                        </i>
+                                    </p><a href="index.html"><button class="top-button"> Return Home</button></a></div>
+                                    </section>
+                                    <div class="bottom-button-container">
+                                        <div>
+                                            <img src="praixTech.png" alt="praixTech">
+                                            <p class="praix">Creativity beyond Imagination</p>
+                                        </div>
+                                        <div class="vertical-line"></div>
+                                
+                                        <ul class="list-style">
+                                            <li><a href="services.html#Graphic" class="praix">Graphics Design</a></li>
+                                            <li><a href="services.html#Web" class="praix">Web and App Development</a></li>
+                                            <li><a href="services.html#Product" class="praix">Product Design</a></li>
+                                            <li><a href="services.html#Digital" class="praix">Online Marketing</a></li>
+                                            <li><a href="contact.html" class="praix">Contact Us</a></li>
+                                        </ul>
+                                        <div class="vertical-line"></div>
+                                        <div>
+                                            <h3>Get In Touch</h3>
+                                            <p>No 5 Alayande Compound, <br>Orita-Naira, Ogbomoso</p>
+                                            <p>
+                                                <a href="tel:09045048954" class="praixis">+234(0) 90-450-489-54</a><br>
+                                                <a href="tel:08164208524" class="praixis">+234(0) 816-420-8524</a>
+                                            </p>
+                                            <p>Click to send a mail to<br> <a href="mailto:praiseola22@gmail.com" class="praixis">praiseola22@gmail.com</a></p>
+                                            <p>&copy; 2024 praixTECH</p>
+                                        </div>
+                                    </div>
+
+    

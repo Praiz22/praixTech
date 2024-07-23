@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Get in touch with us for professional software development and graphics design services.">
+    <link rel="canonical" href="https://praixTech.netlify.app/contact">
+    <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="praixTech.png">
+    <title>praixTECH - Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cont{
+            
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            max-width: 50%;
+            position: relative;
+            padding-right: 20px;
+          }
+          .cont img {
+            height: auto;
+            width: 50%; 
+            max-width: 60%; 
+          }
+          .header-text {
+            font-size: 1.3rem;
+            margin-left: 1rem; 
+            
+            font-size: calc(1.3rem + 0.5vw); 
+          }
+          
+          @media only screen and (max-width: 768px) {
+            .header-text {
+              font-size: 1.2rem;
+            }
+          }
+        .ham{
+            margin-right: 7px;
+            width: 40px;
+            height: 40px;
+        }
+        .burger{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 40%;
+        }
+        .dropdown-menu {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropbtn {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          .dropdown-content a:hover {
+            background-color: #ddd;
+          }
+          
+          .dropdown-menu:hover .dropdown-content {
+            display: block;
+          }
+          @media (max-width: 768px) {
+            .logo-container {
+                max-width: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-container {
+                max-width: 100px; 
+            }
+        }
+        .nav-contact {
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-right: 30%;
+            margin-bottom: 10px;
+        }
+        .nav-contact .text {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: Calibri;
+        }
+        #contact-form {
+            background: url(grad.jpg) no-repeat center center / cover;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #e4e4e4;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        #contact-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #contact-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        #contact-form input,
+        #contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .bn632-hover {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 200;
+            color: #fff;
+            cursor: pointer;
+            height: 45px;
+            text-align: center;
+            border: none;
+            background-size: 300% 100%;
+            border-radius: 10px;
+            transition: all .4s ease-in-out;
+        }
+        .bn632-hover:hover {
+            background-position: 100% 0;
+        }
+        .bn632-hover:focus {
+            outline: none;
+        }
+        .bn632-hover.bn19 {
+            background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+            box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+        }
+        .bottom-button-container {
+            background-color: #121518;
+            text-align: center;
+            padding: 10px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+        }
+        .bottom-button-container img {
+            max-width: 100px;
+        }
+        .list-style {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .list-style li {
+            margin: 5px 0;
+        }
+        .list-style .praix {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-family: Geo Slab BT;
+        }
+        .response-message {
+            display: none;
+            text-align: center;
+            margin-top: 1rem;
+            background-color: #f4f4f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .praixis{
+            text-decoration: none;
+            color:#fc6f2e;
+
+        }
+        .vertical-line {
+            width: 1px; 
+            background-color: #333; 
+            height: 100px; 
+            margin: 0 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cont">
+        <img src="praixTech.png" alt="Logo" ></div>
+        <div class="burger"> 
+            <span class="header-text">Contact Us</span>
+             <nav class="dropdown-menu">
+           <button class="dropbtn"><img src="hamburger.png" class="ham"></button>
+                <div class="dropdown-content">
+                <a href=" services.html #Graphic">Graphics</a>
+                <a href=" services.html #Product">Product Design</a>
+                <a href=" services.html #Digital">Digital Marketing</a>
+                <a href=" services.html #Web">Web Design</a>
+                <a href="index.html">Return Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                </div></div>
+          </nav>
+        
+                   </nav>
+    </header>
+    <section id="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="https://formspree.io/f/xzzpdezz" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+    
+            <button class="bn632-hover bn19" type="submit">Click Here to Submit</button>
+            <input type="hidden" name="_next" value="thank-you.html">
+        </form>
+        <div id="response-message" class="response-message">
+            <h1>Thank You!</h1>
+            <p>Your message has been successfully sent. We will get back to you shortly.</p>
+            <a href="index.html">Return to Home</a>
+        </div>
+    </section>
+    <div class="bottom-button-container">
+        <div>
+            <img src="praixTech.png" alt="praixTech">
+            <p class="praix">Creativity beyond Imagination</p>
+        </div>
+        <div class="vertical-line"></div>
+
+        <ul class="list-style">
+            <li><a href="services.html#Graphic" class="praix">Graphics Design</a></li>
+            <li><a href="services.html#Web" class="praix">Web and App Development</a></li>
+            <li><a href="services.html#Product" class="praix">Product Design</a></li>
+            <li><a href="services.html#Digital" class="praix">Online Marketing</a></li>
+            <li><a href="contact.html" class="praix">Contact Us</a></li>
+        </ul>
+        <div class="vertical-line"></div>
+        <div>
+            <h3>Get In Touch</h3>
+            <p>No 5 Alayande Compound, <br>Orita-Naira, Ogbomoso</p>
+            <p>
+                <a href="tel:09045048954" class="praixis">+234(0) 90-450-489-54</a><br>
+                <a href="tel:08164208524" class="praixis">+234(0) 816-420-8524</a>
+            </p>
+            <p>Click to send a mail to<br> <a href="mailto:praiseola22@gmail.com" class="praixis">praiseola22@gmail.com</a></p>
+            <p>&copy; 2024 praixTECH</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var form = event.target;
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action);
+            xhr.setRequestHeader('Accept', 'application/json');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    form.reset();
+                    document.getElementById('response-message').style.display = 'block';
+                } else {
+                    alert('There was an issue submitting the form. Please try again.');
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+</body>
+</html>
