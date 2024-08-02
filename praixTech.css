@@ -220,7 +220,7 @@ header {
     gap: 20px;
     align-items: center;
     width: 80%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 20px auto;
     background-color: #04000a;
     color: #ffffff;
@@ -328,7 +328,9 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 7px;
+}
+.bottom-button-container a{
+    font-size:0.8em;
 }
 .bottom-button-container img {
     max-width: 100px;
