@@ -85,6 +85,8 @@ header {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
+	font-size:0.8rem;
+	text-align: center;
 }
 
 .nav-links a:hover {
@@ -219,7 +221,7 @@ header {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     margin: 20px auto;
     background-color: #04000a;
@@ -319,44 +321,58 @@ header {
     
   }
 
-  .bottom-button-container {
-    background-color: #121518;
-    text-align: center;
-    padding: 10px;
-    color: #ffffff;
+ .footer-container {
+    width: 100%;
+    background-color: #121518; /* Background color for the full width */
+}
+
+footer {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the items vertically */
+    padding: 20px;
+    max-width: 1300px;
+    margin: auto;
+    color: #ffffff;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin: 10px;
+    text-align: center;
 }
-.bottom-button-container a{
-    font-size:0.8em;
+
+footer img {
+    max-width: 60px;
+    margin-bottom: 10px;
 }
-.bottom-button-container img {
-    max-width: 100px;
-}
-.list-style {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-.list-style li {
-    margin: 5px 0;
-}
-.list-style .praix {
-    color: #a0a0a0;
+
+footer a {
+    font-size: 0.8em;
+    font-family: 'Lora', serif;
+    color: #ffffff;
     text-decoration: none;
-    font-family: Geo Slab BT;
 }
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 .praixis{
     text-decoration: none;
     color:#fc6f2e;
 
 }
 .vertical-line {
-    width: 1px; 
+    width: 2px; 
     background-color: #333; 
     height: 100px; 
     margin: 0 20px; 
+}
+.praix{
+	font-family:lora;
+	fonts-size:1em;
 }
