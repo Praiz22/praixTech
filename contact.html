@@ -36,8 +36,8 @@
           }
           .cont img {
             height: auto;
-            width: 50%; 
-            max-width: 60%; 
+            width: 70%; 
+            max-width: 80%; 
           }
           .header-text {
             font-size: 1.3rem;
@@ -124,7 +124,8 @@
         }
         #contact-form {
             background: url(grad.jpg) no-repeat center center / cover;
-            max-width: 600px;
+			width:80%;
+            max-width: 400px;
             margin: 50px auto;
             padding: 20px;
             background-color: #e4e4e4;
@@ -141,7 +142,7 @@
         }
         #contact-form input,
         #contact-form textarea {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
@@ -170,34 +171,46 @@
             background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
             box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
         }
-        .bottom-button-container {
-            background-color: #121518;
-            text-align: center;
-            padding: 10px;
-            color: #ffffff;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 7px;
-        }
-        .bottom-button-container img {
-            max-width: 100px;
-        }
-        .list-style {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: left;
-        }
-        .list-style li {
-            margin: 5px 0;
-        }
-        .list-style .praix {
-            color: #a0a0a0;
-            text-decoration: none;
-            font-family: Geo Slab BT;
-        }
+.footer-container {
+    width: 100%;
+    background-color: #121518; /* Background color for the full width */
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the items vertically */
+    padding: 20px;
+    max-width: 1300px;
+    margin: auto;
+    color: #ffffff;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+footer img {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    font-size: 0.8em;
+    font-family: 'Lora', serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
         .response-message {
             display: none;
             text-align: center;
@@ -223,7 +236,8 @@
 <body>
     <header>
         <div class="cont">
-        <img src="praixTech.png" alt="Logo" ></div>
+       <a href="https://praixtech.netlify.app"><img src="praixTech.png" alt="praixTech"></a>
+		</div>
         <div class="burger"> 
             <span class="header-text">Contact Us</span>
              <nav class="dropdown-menu">
@@ -265,13 +279,13 @@
             <a href="index.html">Return to Home</a>
         </div>
     </section>
-    <div class="bottom-button-container">
-        <div>
-            <img src="praixTech.png" alt="praixTech">
+                                <div class="footer-container">
+    <footer>
+        <div class="footer-section">
+            <a href="https://praixtech.netlify.app"><img src="praixTech.png" alt="praixTech"></a>
             <p class="praix">Creativity beyond Imagination</p>
         </div>
         <div class="vertical-line"></div>
-
         <ul class="list-style">
             <li><a href="services.html#Graphic" class="praix">Graphics Design</a></li>
             <li><a href="services.html#Web" class="praix">Web and App Development</a></li>
@@ -280,17 +294,18 @@
             <li><a href="contact.html" class="praix">Contact Us</a></li>
         </ul>
         <div class="vertical-line"></div>
-        <div>
-            <h3>Get In Touch</h3>
-            <p>No 5 Alayande Compound, <br>Orita-Naira, Ogbomoso</p>
+        <div class="footer-section">
+            <h5>Get In Touch</h5>
+            <p class="praix">No 5 Alayande Compound,<br>Orita-Naira, Ogbomoso</p>
             <p>
                 <a href="tel:09045048954" class="praixis">+234(0) 90-450-489-54</a><br>
                 <a href="tel:08164208524" class="praixis">+234(0) 816-420-8524</a>
             </p>
-            <p>Click to send a mail to<br> <a href="mailto:praiseola22@gmail.com" class="praixis">praiseola22@gmail.com</a></p>
-            <p>&copy; 2024 praixTECH</p>
+            <p>Click to send a mail to<br><a href="mailto:praiseola22@gmail.com" class="praixis">praiseola22@gmail.com</a></p>
+            <p class="praix">&copy; 2024 praixTECH</p>
         </div>
-    </div>
+    </footer>
+</div>
     <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -311,5 +326,16 @@
             xhr.send(formData);
         });
     </script>
+	<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/66ae153d1601a2195ba05989/1i4c05usl';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
 </body>
 </html>
