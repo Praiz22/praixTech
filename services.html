@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our professional software development and graphics design services tailored to meet your needs.">
+    <meta name="description" content="Explore our professional software development 
+	and graphics design services tailored to meet your needs.">
     <link rel="canonical" href="https://praixTech.netlify.app/services">
     <meta name="robots" content="index, follow">
     <meta http-equiv="refresh" content="20">
@@ -16,6 +17,7 @@
             margin: 0;
             padding: 0;
             background-color: #ffffff;
+			
         }
 
         header {
@@ -26,6 +28,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+			width:90%;
+			max-width:1200px;
+			margin:auto;
         }
         .cont{
             
@@ -72,13 +77,17 @@
             justify-content: center;
             gap: 20px;
             padding: 20px;
+			
         }
         .director-section {
             display: flex;
             flex-wrap: wrap;
+			margin:auto;
+			justify-content:center;
+			align-items:center;
             gap: 20px;
             align-items: center;
-            width: 60%;
+            width: 80%;
             max-width: 900px;
             margin: 20px auto;
             background-color: #ffffff;
@@ -142,12 +151,13 @@
           }
         
         .middler {
-            width: 100%;
+            width: 90%;
             display: flex;
             background-color: #333;
             justify-content: center;
             align-items: center; 
             padding: 10px; 
+			margin:auto;
         }
 
         .middler .logo {
@@ -186,38 +196,7 @@
             }
           }
 
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            padding-left: 20px;
-            padding-right: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .item {
-            position: relative;
-            width: 300px;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .item:hover img {
-            transform: scale(1.1);
-        }
-
-        .item h3, .item p {
-            position: relative;
-            margin: 0.5rem 0;
-        }
+       
         .bn632-hover {
             width: 300px;
             font-size: 16px;
@@ -269,39 +248,151 @@
             font-family: "Roboto", sans-serif;
             cursor: pointer;
           }
-          .bottom-button-container {
-            background-color: #121518;
-            text-align: center;
-            padding: 10px;
-            color: #ffffff;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 7px;
-        }
-        .bottom-button-container img {
-            max-width: 100px;
-        }
-        .list-style {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: left;
-        }
-        .list-style li {
-            margin: 5px 0;
-        }
-        .list-style .praix {
-            color: #a0a0a0;
-            text-decoration: none;
-            font-family: Geo Slab BT;
-        }
+     .footer-container {
+    width: 100%;
+    background-color: #121518; /* Move the background color here to ensure full width */
+}
+
+footer {
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+footer img {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    font-size: 0.8em;
+    font-family: 'Lora', serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.vertical-line {
+    border-left: 1px solid #ffffff;
+    height: 100px;
+    margin: 0 20px;
+    display: none;
+}
+
+.list-style {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .vertical-line {
+        display: block;
+    }
+
+  .footer-container {
+    width: 100%;
+    background-color: #121518; /* Background color for the full width */
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the items vertically */
+    padding: 20px;
+    max-width: 1300px;
+    margin: auto;
+    color: #ffffff;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+footer img {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    font-size: 0.8em;
+    font-family: 'Lora', serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.vertical-line {
+    border-left: 1px solid #ffffff;
+    height: 100px;
+    margin: 0 20px;
+    display: none; /* Hide vertical lines on small screens */
+}
+
+.list-style {
+    list-style: none;
+	text-decoration:underline;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+	
+}
+
+@media (min-width: 768px) {
+    .vertical-line {
+        display: block; /* Show vertical lines on larger screens */
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1;
+        margin: 0 20px;
+        text-align: left;
+    }
+
+    .list-style {
+        text-align: left;
+    }
+}
+
+
+}
+
         .praixis{
             text-decoration: none;
             color:#fc6f2e;
             font-family: Arial, sans-serif;
             text-align: left;
+			font-size:0.8rem;
         }
         .vertical-line {
             width: 1px; 
@@ -359,12 +450,16 @@
           .dropdown-menu:hover .dropdown-content {
             display: block;
           }
+		  .praix{
+		  font-size:0.8rem;
+		  font-family:lato;
         
     </style>
     <body>
             <header>
                 <div class="cont">
-                    <img src="praixTech.png" alt="Logo" ></div>
+                    <a href="https://praixtech.netlify.app"><img src="praixTech.png" alt="praixTech"></a>
+					</div>
                     <div class="burger"> 
                         <span class="header-text">Our Services</span>
              <nav class="dropdown-menu">
@@ -385,7 +480,7 @@
             </header>
             <div class="container">
                 <div class="director-section">
-                    <img src="mock.png">
+                    <img src="graphicDesign.jpg">
                     <div class="director-info"></div>
                     <h3 style="color: #000000;">GRAPHIC DESIGN</h3>
                     <p class="text">Logos, brand identity, print design(business cards, flyers), and
@@ -430,138 +525,51 @@
                     </p></div></div>
             </div><hr>
 <section id="Graphic">
-<div class="middler">
-    <div class="cont">
-        <img src="praixTech.png" alt="Logo" ></div>
-    <div class="burger"> 
-        <span class="middler-text">Graphics Design Portfolio</span>
-</div></div>
-            <div class="gallery">
-                <div class="item">
-                    <img src="creative.png" alt="The Creative Magician">
-                    <h3>The Creative Magician</h3>
-                    <p>creativity beyond imagination</p>
-                </div>
-                <div class="item">
-                    <img src="frame.png" alt="General Design">
-                    <h3>General Design</h3>
-                    <p>For all sort of Designing and Product Visualization</p>
-                </div>
-                <div class="item">
-                    <img src="power.jpg" alt="chruch flyers">
-                    <h3>Church Program Design</h3>
-                    <p>Improve your church branding through powerful and spirit filled designs!</p>
-                </div>
-                <div class="item">
-                    <img src="palace.png" alt="party">
-                    <h3>Events Design</h3>
-                    <p>You Definitely need a vibrant deisgn if you want your friends to come for your party</p>
-                </div>
-                <div class="item">
-                    <img src="mybook.jpg" alt="book cover">
-                    <h3>Book Cover Design</h3>
-                    <p>we provide the ultimate theme for your book.</p>
-                </div>
-                <div class="item">
-                    <img src="brochure.png" alt="book">
-                    <h3>Book Cover</h3>
-                    <p>for your book and journals cover</p>
-                </div>
-                <div class="item">
-                    <img src="train.jpg" alt="Graphics Class">
-                    <h3>Graphics Training</h3>
-                    <p>Become a pro in graphics design through seamless and thorough training session</p>
-                </div>
-                <div class="item">
-                    <img src="hii.jpg" alt="graphics learning">
-                    <h3>GRAPHICS 101</h3>
-                    <p>A perfect guide for you as a beginner</p>
-                </div>
-                <div class="item">
-                    <img src="show.jpg" alt="party">
-                </div>
-                  
-                <div class="item">
-                    <img src="monday.jpg" alt="monday">
-                    <h3>Daily Posts</h3>
-                    <p>Inspire people through daily post</p>
-                </div>
-                <div class="item">
-                    <img src="branding.png" alt="branding">
-                    <h3>Create Unique Identity for your Business</h3>
-                    <p>make your business grow through our branding and product visualization</p>
-                </div>
-                <div class="item">
-                    <img src="sav.jpg" alt="printing">
-                    <h3>General Printing</h3>
-                    <p>Bringing your Designs to Life</p>
-                </div>
-                <div class="item">
-                    <img src="mom1.png" alt="birthday designs">
-                    <h3>Birthday Designs</h3>
-                    <p>Surprise your Loved ones with amazing designs</p>
-                </div>
-                <div class="item">
-                    <img src="mom2.png" alt="birthday designs">
-                    <h3> Birthday Cards and Gifts</h3>
-                </div>
-                <div class="item">
-                    <img src="daddy's birthday.jpg" alt="birthday">
-                    <h3>Birthday Frame</h3>
-                    <p>Get your best frame delivered through out south-west</p>
-                </div>
-                <div class="item">
-                    <img src="precious.png" alt="birthday designs">
-                    <h3>Congratulaory Designs</h3>
-                    <p>For your Jotters and Banners</p>
-                </div>
-                
-                <div class="item">
-                    <img src="childrens's day.jpg" alt="children's day">
-                    <h3>Seasonal Greetings</h3>
-                    <p>Reach out to customers and families with a heartfelt grettings designs</p>
-                </div>
-                <div class="item">
-                    <img src="mothers day.jpg" alt="mothers day">
-                </div>
-                <div class="item">
-                    <img src="e.jpg" alt="web design">
-                    <h3>Web Development</h3>
-                    <p>Expand your Horizon, connect with thousands of customers  </p>
-                </div>
-                <div class="item">
-                    <img src="f.jpg" alt="coding">
-                    <h3>Software Engineer</h3>
-                    <p>Lets Develop your dream software and website at shikini price</p>
-                </div>
-                <div class="item">
-                    <img src="mybook.jpg" alt="coding">
-                    <h3>Project Research</h3>
-                    <p>Strugling with your School Projects? don't panic, maintain the steeze we gat you covered!</p>
-                </div>
-                <div class="item">
-                    <img src="latter logo.png" alt="logo">
-                    <h3>Logo Design</h3>
-                    <p>A business without a logo is like a soldier without a gun, let help you design one to fore run your mission and vision</p>
-                </div>
-                <div class="item">
-                    <img src="life.jpg" alt="meme">
-                    <h3>Calming Pills</h3>
-                    <p>With great creativity, our services will Definitely bring a smile to your face</p>
-                </div>
-                <div class="item">
-                    <img src="later.png" alt="meme">
-                    <h3>TRY US NOW!!!</h3>
-                    <p>a trial will DEFINITELY convince you!</p>
-                </div>
-                <section class="cta">
-                    <a href="index.html"><button class="bn632-hover bn19">Click Here to Go back home</button></a>
-                </section>
-            </section>
+    <div class="middler">
+        <div class="cont">
+		<a href="https://praixTech.netlify.app">
+		<a href="https://praixtech.netlify.app"><img src="praixTech.png" alt="praixTech"></a>
+		</a>
+        </div>
+        <div class="burger">
+            <span class="middler-text">Our Graphics Design Services</span>
+        </div>
+    </div>
+    <div class="director-section">
+        <img src="graphicDesign.jpg" alt="Graphic Design">
+        <div class="director-info"></div>
+        <h3 style="color: #000000;">GRAPHIC DESIGN</h3>
+        <p class="text">Unlock the potential of your brand with our premier graphic design services. At praix Tech, we specialize in creating visually compelling and market-ready designs.</p>
+    </div>
+    <div class="director-section">
+        <img src="photoshop.jpeg" alt="Branding">
+        <div class="director-info"></div>
+        <h3 style="color: #000000;">What We Offer</h3>
+        <p class="text">Brand Identity Design<br>
+            Logo Creation<br>
+            Marketing Collaterals (Business Cards, Flyers, Brochures)<br>
+            Social Media Graphics<br>
+            Web and Mobile App Design<br>
+            Packaging Design<br>
+            Infographics and Illustrations
+        </p>
+    </div>
+    <div class="director-section">
+        <img src="chooseUs.jpg" alt="Why Choose Us">
+        <div class="director-info"></div>
+        <h3 style="color: #000000;">Why Choose Us?</h3>
+        <p class="text"><b>Creative Excellence:</b> Our designs are tailored to meet your brand's vision, ensuring a strong visual impact.<br>
+            <b>Market Success:</b> Stand out with innovative and aesthetically pleasing designs that capture attention and drive engagement.<br>
+            <b>Professional Quality:</b> Benefit from high-quality designs that enhance your brand's credibility and appeal.
+        </p>
+    </div>
+</section>
+
 <section id="Product">
     <div class="middler">
         <div class="cont">
-            <img src="praixTech.png" alt="Logo" ></div>
+            <img src="praixTech.png" alt="Logo" >
+			</div>
             <div class="burger"> 
                 <span class="middler-text">Our Product Design Services</span>
     </div></div>
@@ -601,7 +609,8 @@
                     <section id="Digital">
                        <div class="middler">
     <div class="cont">
-        <img src="praixTech.png" alt="Logo" ></div>
+        <img src="praixTech.png" alt="Logo" >
+		</div>
         <div class="burger"> 
             <span class="middler-text">Online Marketing Services</span>
 </div></div>
@@ -652,7 +661,8 @@
             <section id="Web">
                 <div class="middler">
                     <div class="cont">
-                        <img src="praixTech.png" alt="Logo" ></div>
+                        <img src="praixTech.png" alt="Logo" >
+						</div>
                         <div class="burger"> 
                             <span class="middler-text">Cutting Edge Web Design Services</span>
                 </div></div>
@@ -669,63 +679,93 @@
                                     <img src="what2.png">
                                     <div class="director-info"></div>
                                     <h3 style="color: #000000;">What We Offer</h3>
-                                    <p class="text"><b>Custom Web Design:</b> Stand out with a unique, sutom-designed website
-                                        that reflects your brand identity. We focus on creating visually appelaing layouts
+                                    <p class="text"><b>Custom Web Design:</b> Stand out with
+									a unique, sutom-designed website
+                                        that reflects your brand identity. We focus on creating visually
+										appelaing layouts
                                         that resonate with your target audience and enhance your online prescence<br>
-                                        develop strategic concepts that are both innovative and practical.Our Processes includes
-                                        brainstorming sessions, wireframing, and prototyping to refine ideas and ensure market readiness.<br>
+                                        develop strategic concepts that are both innovative and practical.
+										Our Processes includes
+                                        brainstorming sessions, wireframing, and prototyping to refine ideas
+										and ensure market readiness.<br>
                                         <b>Robust Design and Protyping: </b> Experience robust and visually appealing
                                         <b>Responsive Design : </b> Ensure a seamless experience across all devices. Our responsive
                                        design approach guarantees your websites looks and functiions perfectly on desktops, tablets and 
                                        smartphones<br>
-                                       <b>User Experience (UX) and User Interface (UI): </b> Create intuitive and engaging user experiences.
-                                       We priortize UX and UI design to ensure your website is easy to navigate, enhancing user satisfaction 
+                                       <b>User Experience (UX) and User Interface (UI): </b> Create
+									   intuitive and engaging user experiences.
+                                       We priortize UX and UI design to ensure
+									   your website is easy to navigate, enhancing user satisfaction 
                                        and retention<br>
-                                       <b>Technical Implementation an Support: </b> Benefit from flawless technical execution. We collaborate with 
-                                       developers to implement your design efficiently, ensuting your website is secure, fast, and scalable.<br>
-                                       <b>Ongoing Maintenance and Updates: </b> Keep your website up-to-date and running smoothly. We offer ongoing
-                                       maintenance and updates to ensure your website remains relevant and performs optimally
+                                       <b>Technical Implementation an Support: </b> 
+									   Benefit from flawless technical execution. We collaborate with 
+                                       developers to implement your design 
+									   efficiently, ensuting your website is secure, fast, and scalable.<br>
+                                       <b>Ongoing Maintenance and Updates: </b> 
+									   Keep your website up-to-date and running
+									   smoothly. We offer ongoing
+                                       maintenance and updates to ensure your website
+									   remains relevant and performs optimally
                                        
                                     </p></div>
                                     <div class="director-section">
                                     <img src="why.png">
                                     <div class="director-info"></div>
                                     <h3 style="color: #000000;">Why Choose US?</h3>
-                                    <p class="text"><b>Enhanced User Engagement:</b>Our custom designs ensure that your website stands out and makes a 
+                                    <p class="text"><b>Enhanced User Engagement:</b>
+									Our custom designs ensure that your website stands out and makes a 
                                         lasting impression.
                                         <br>
-                                        <b>Improved User Engagement :</b> Intuitive UX/UI design keeps users engaged and encouraged repeats visits.<br>
-                                        <b>Optimal Performance: </b>Our technical expertise ensures your website is fast, secure and scalable.<br><br>
-                                        <i>Transform your online Prescence with praixTECH. Contact us today to create a website that not
+                                        <b>Improved User Engagement :</b> Intuitive UX/UI design keeps 
+										users engaged and encouraged repeats visits.<br>
+                                        <b>Optimal Performance: </b>Our technical expertise
+										ensures your website is fast, secure and scalable.<br><br>
+                                        <i>Transform your online Prescence with praixTECH. 
+										Contact us today to create a website that not
                                             only look amazing but also delivers exceptional performance
                                         </i>
                                     </p><a href="index.html"><button class="top-button"> Return Home</button></a></div>
                                     </section>
-                                    <div class="bottom-button-container">
-                                        <div>
-                                            <img src="praixTech.png" alt="praixTech">
-                                            <p class="praix">Creativity beyond Imagination</p>
-                                        </div>
-                                        <div class="vertical-line"></div>
-                                
-                                        <ul class="list-style">
-                                            <li><a href="services.html#Graphic" class="praix">Graphics Design</a></li>
-                                            <li><a href="services.html#Web" class="praix">Web and App Development</a></li>
-                                            <li><a href="services.html#Product" class="praix">Product Design</a></li>
-                                            <li><a href="services.html#Digital" class="praix">Online Marketing</a></li>
-                                            <li><a href="contact.html" class="praix">Contact Us</a></li>
-                                        </ul>
-                                        <div class="vertical-line"></div>
-                                        <div>
-                                            <h3>Get In Touch</h3>
-                                            <p>No 5 Alayande Compound, <br>Orita-Naira, Ogbomoso</p>
-                                            <p>
-                                                <a href="tel:09045048954" class="praixis">+234(0) 90-450-489-54</a><br>
-                                                <a href="tel:08164208524" class="praixis">+234(0) 816-420-8524</a>
-                                            </p>
-                                            <p>Click to send a mail to<br> <a href="mailto:praiseola22@gmail.com" class="praixis">praiseola22@gmail.com</a></p>
-                                            <p>&copy; 2024 praixTECH</p>
-                                        </div>
-                                    </div>
+                                <div class="footer-container">
+    <footer>
+        <div class="footer-section">
+            <a href="https://praixtech.netlify.app"><img src="praixTech.png" alt="praixTech"></a>
+            <p class="praix">Creativity beyond Imagination</p>
+        </div>
+        <div class="vertical-line"></div>
+        <ul class="list-style">
+            <li><a href="services.html#Graphic" class="praix">Graphics Design</a></li>
+            <li><a href="services.html#Web" class="praix">Web and App Development</a></li>
+            <li><a href="services.html#Product" class="praix">Product Design</a></li>
+            <li><a href="services.html#Digital" class="praix">Online Marketing</a></li>
+            <li><a href="contact.html" class="praix">Contact Us</a></li>
+        </ul>
+        <div class="vertical-line"></div>
+        <div class="footer-section">
+            <h5>Get In Touch</h5>
+            <p class="praix">No 5 Alayande Compound,<br>Orita-Naira, Ogbomoso</p>
+            <p>
+                <a href="tel:09045048954" class="praixis">+234(0) 90-450-489-54</a><br>
+                <a href="tel:08164208524" class="praixis">+234(0) 816-420-8524</a>
+            </p>
+            <p>Click to send a mail to<br><a href="mailto:praiseola22@gmail.com" class="praixis">praiseola22@gmail.com</a></p>
+            <p class="praix">&copy; 2024 praixTECH</p>
+        </div>
+    </footer>
+</div>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/66ae153d1601a2195ba05989/1i4c05usl';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+</body>
+</html>
+
 
     
