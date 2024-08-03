@@ -93,34 +93,46 @@
             object-fit: cover;
             margin-bottom: 1rem;
         }
-        .bottom-button-container {
-            background-color: #121518;
-            text-align: center;
-            padding: 10px;
-            color: #ffffff;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 7px;
-        }
-        .bottom-button-container img {
-            max-width: 100px;
-        }
-        .list-style {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: left;
-        }
-        .list-style li {
-            margin: 5px 0;
-        }
-        .list-style .praix {
-            color: #a0a0a0;
-            text-decoration: none;
-            font-family: Geo Slab BT;
-        }
+        .footer-container {
+    width: 100%;
+    background-color: #121518; /* Background color for the full width */
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the items vertically */
+    padding: 20px;
+    max-width: 1300px;
+    margin: auto;
+    color: #ffffff;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+footer img {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    font-size: 0.8em;
+    font-family: 'Lora', serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
         .praixis{
             text-decoration: none;
             color:#fc6f2e;
@@ -132,8 +144,19 @@
             height: 100px; 
             margin: 0 20px; 
         }
+		 .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 5px;
+            display: none;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1 style="color: #ffffff;">About Us</h1>
@@ -146,7 +169,7 @@
     
     <div class="container">
         <section class="about-section">
-            <img src="praixTech.png" alt="About praixTECH">
+            <a href="https://praixtech.netlify.app"><img src="praixTech.png" alt="praixTech"></a>
             <div class="about-content">
                 <h2>Who We Are</h2>
                 <p>Welcome to praixTECH! We are a passionate team of developers and designers dedicated to creating stunning and responsive web designs. Our mission is to deliver high-quality digital solutions that help our clients achieve their goals.</p>
@@ -174,13 +197,13 @@
             </div>
         </section>
     </div>
-    <div class="bottom-button-container">
-        <div>
-            <img src="praixTech.png" alt="praixTech">
+                                  <div class="footer-container">
+    <footer>
+        <div class="footer-section">
+            <a href="https://praixtech.netlify.app"><img src="praixTech.png" alt="praixTech"></a>
             <p class="praix">Creativity beyond Imagination</p>
         </div>
         <div class="vertical-line"></div>
-
         <ul class="list-style">
             <li><a href="services.html#Graphic" class="praix">Graphics Design</a></li>
             <li><a href="services.html#Web" class="praix">Web and App Development</a></li>
@@ -189,16 +212,31 @@
             <li><a href="contact.html" class="praix">Contact Us</a></li>
         </ul>
         <div class="vertical-line"></div>
-        <div>
-            <h3>Get In Touch</h3>
-            <p>No 5 Alayande Compound, <br>Orita-Naira, Ogbomoso</p>
+        <div class="footer-section">
+            <h5>Get In Touch</h5>
+            <p class="praix">No 5 Alayande Compound,<br>Orita-Naira, Ogbomoso</p>
             <p>
                 <a href="tel:09045048954" class="praixis">+234(0) 90-450-489-54</a><br>
                 <a href="tel:08164208524" class="praixis">+234(0) 816-420-8524</a>
             </p>
-            <p>Click to send a mail to<br> <a href="mailto:praiseola22@gmail.com" class="praixis">praiseola22@gmail.com</a></p>
-            <p>&copy; 2024 praixTECH</p>
+            <p>Click to send a mail to<br><a href="mailto:praiseola22@gmail.com" class="praixis">praiseola22@gmail.com</a></p>
+            <p class="praix">&copy; 2024 praixTECH</p>
         </div>
-    </div>
+    </footer>
+</div>
+
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/66ae153d1601a2195ba05989/1i4c05usl';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
