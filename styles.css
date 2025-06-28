@@ -1,0 +1,1022 @@
+/* Custom CSS for praixTECH Main Website */
+
+/* --- Root Variables for Theming (Light/Dark Mode) --- */
+:root {
+    /* Light Mode Palette: White/Light dominant, with orange and dark blue accents from logo */
+    --background-color-light: #f8f9fa; /* Very light gray/off-white */
+    --text-color-light: #343a40; /* Dark gray for primary text */
+    --heading-color-light: #212529; /* Even darker gray for headings */
+    --card-background-light: rgba(255, 255, 255, 0.7); /* Slightly transparent white for glassmorphism */
+    --border-color-light: rgba(255, 255, 255, 0.4); /* Lighter border for glassmorphism */
+    --box-shadow-color-light: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+    --primary-color: #ff7300; /* Vibrant Orange (from logo: F39F22, slightly adjusted for vibrancy) */
+    --primary-hover-color: #e06200; /* Darker orange for hover */
+    --secondary-color: #6c757d; /* Bootstrap default secondary gray */
+    --secondary-hover-color: #5a6268; /* Darker secondary for hover */
+
+    --accent-dark-blue: #1A237E; /* Dark Blue/Navy from logo */
+    --accent-light-pink: #FFC0CB; /* Light Pink from logo (subtle usage) */
+    --accent-light-blue-purple: #ADD8E6; /* Light Blue/Purple from logo (subtle usage) */
+
+    --navbar-bg-light: rgba(255, 255, 255, 0.9); /* Opaque white for navbar */
+    --navbar-link-light: #343a40;
+    --section-bg-light: #ffffff; /* White for default sections */
+    --alt-section-bg-light: #f0f2f5; /* Light gray for alternating sections */
+    --footer-bg-light: #121518; /* Very dark gray for footer */
+    --footer-text-light: #e9ecef; /* Light text for footer */
+    --input-bg-light: rgba(255, 255, 255, 0.8); /* Semi-transparent white for inputs */
+    --input-border-light: #ced4da; /* Light gray border */
+    --modal-backdrop-light: rgba(0, 0, 0, 0.5); /* Semi-transparent black for modal overlay */
+    --icon-color-light: var(--primary-color); /* Icons use primary color by default */
+
+    /* Dark Mode Palette: Dark dominant, with lighter orange and dark blue accents */
+    --background-color-dark: #121212; /* Deep dark background */
+    --text-color-dark: #e0e0e0; /* Light gray for text */
+    --heading-color-dark: #f8f9fa; /* Off-white for headings */
+    --card-background-dark: rgba(33, 37, 41, 0.8); /* Semi-transparent dark for glassmorphism */
+    --border-color-dark: rgba(52, 58, 64, 0.4); /* Darker border for glassmorphism */
+    --box-shadow-color-dark: rgba(0, 0, 0, 0.5); /* Stronger shadow */
+
+    --primary-color-dark: #ffa040; /* Lighter Orange for dark mode visibility */
+    --primary-hover-color-dark: #ff8c2a; /* Darker lighter orange for hover */
+    --secondary-color-dark: #495057; /* Darker gray secondary */
+    --secondary-hover-color-dark: #343a40; /* Even darker secondary for hover */
+
+    --navbar-bg-dark: rgba(33, 37, 41, 0.9); /* Opaque dark for navbar */
+    --navbar-link-dark: #f8f9fa;
+    --section-bg-dark: #1a1a1a; /* Darker sections */
+    --alt-section-bg-dark: #212121; /* Slightly lighter dark for alternating sections */
+    --footer-bg-dark: #0a0a0a; /* Deepest dark for footer */
+    --footer-text-dark: #b0b0b0; /* Muted light text for footer */
+    --input-bg-dark: rgba(52, 58, 64, 0.8); /* Semi-transparent dark for inputs */
+    --input-border-dark: #495057; /* Darker border */
+    --modal-backdrop-dark: rgba(0, 0, 0, 0.7); /* Darker modal overlay */
+    --icon-color-dark: var(--primary-color-dark); /* Icons use primary color in dark mode */
+}
+
+/* --- Base Body Styling --- */
+body {
+    font-family: 'Inter', sans-serif; /* Applied globally */
+    margin: 0;
+    /* Padding to prevent content from being hidden by fixed navbar */
+    padding-top: 76px; /* Adjust based on actual navbar height */
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    /* Smooth transitions for theme changes */
+    transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden; /* Prevents horizontal scrollbars, crucial for animations */
+}
+
+/* Dark Mode Activation: Styles applied when 'dark-mode' class is on body */
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* --- Global Heading Styling --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic font for all headings */
+    color: var(--heading-color-light);
+    transition: color 0.5s ease; /* Smooth color transition for theme change */
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--heading-color-dark);
+}
+
+.highlight {
+    color: var(--primary-color); /* Uses the defined primary color for highlights */
+}
+
+/* Gradient Text for special headings */
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-dark-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for browsers that don't support text-fill-color */
+}
+body.dark-mode .gradient-text {
+    background: linear-gradient(90deg, var(--primary-color-dark), var(--accent-light-blue-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* --- Glassmorphism Effect Base Style --- */
+.glassmorphism {
+    background: var(--card-background-light);
+    backdrop-filter: blur(10px); /* Blurs content behind the element */
+    -webkit-backdrop-filter: blur(10px); /* Vendor prefix for Safari */
+    border: 1px solid var(--border-color-light); /* Subtle border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 32px 0 var(--box-shadow-color-light); /* Soft shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Dark mode adjustments for glassmorphism */
+body.dark-mode .glassmorphism {
+    background: var(--card-background-dark);
+    border: 1px solid var(--border-color-dark);
+    box-shadow: 0 8px 32px 0 var(--box-shadow-color-dark);
+}
+
+/* Hover effect for glassmorphism elements */
+.glassmorphism:hover {
+    transform: translateY(-5px) scale(1.01); /* Lifts and slightly scales */
+    box-shadow: 0 12px 40px 0 var(--box-shadow-color-light); /* More pronounced shadow */
+}
+body.dark-mode .glassmorphism:hover {
+    box-shadow: 0 12px 40px 0 var(--box-shadow-color-dark);
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    /* Uses fixed-top from Bootstrap for sticky behavior */
+    /* Applies glassmorphism directly */
+    background: var(--navbar-bg-light);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+    padding: 10px 15px; /* Padding inside the navbar */
+}
+
+/* Dark mode for navbar */
+body.dark-mode .navbar {
+    background: var(--navbar-bg-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand .logo-animation {
+    width: 60px; /* Default logo size */
+    height: 60px;
+    border-radius: 50%; /* Makes the logo circular */
+    transition: transform 0.3s ease; /* Smooth hover animation */
+    object-fit: contain; /* Ensures the entire image fits */
+}
+.navbar-brand .logo-animation:hover {
+    transform: rotate(10deg) scale(1.05); /* Rotates and slightly scales on hover */
+}
+
+.navbar-nav .nav-link {
+    color: var(--navbar-link-light) !important; /* Override Bootstrap's link color */
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+body.dark-mode .navbar-nav .nav-link {
+    color: var(--navbar-link-dark) !important;
+}
+
+/* Underline effect for nav links */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease-in-out;
+}
+/* Expands underline on hover and for the active link */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+/* Slight lift and color change on hover/active */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    transform: translateY(-2px);
+    color: var(--primary-color) !important;
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0; /* Ensures content has space */
+    background-color: #000; /* Fallback for background */
+}
+
+/* Background images for hero section with fading animation */
+.hero-section::before,
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out; /* Smooth transition for background changes */
+    z-index: 0; /* Keep behind overlay and content */
+}
+
+.hero-section::before {
+    background-image: url('futurism.jpg'); /* Your first hero background image */
+    animation: hero-fade-in-out 10s infinite alternate; /* First image fades in and out */
+}
+
+.hero-section::after {
+    background-image: url('helium-min.jpg'); /* Your second hero background image */
+    animation: hero-fade-in-out-reverse 10s infinite alternate-reverse; /* Second image fades in and out in reverse */
+}
+
+@keyframes hero-fade-in-out {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes hero-fade-in-out-reverse {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+    z-index: 1; /* Keep above backgrounds */
+}
+.hero-section .content {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay and backgrounds */
+    color: #fff;
+    max-width: 800px;
+    padding: 20px;
+}
+.hero-section .hero-logo {
+    width: 150px;
+    height: 150px; /* Ensure height matches width for consistent rotation */
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px var(--primary-color)); /* Glow effect */
+    /* Applied 3D rotation animation */
+    animation: rotate3D 3s infinite linear; /* Adjust duration as needed */
+}
+/* No separate .rotated-logo class, apply directly to .hero-logo */
+@keyframes rotate3D {
+    0% { transform: perspective(500px) rotateY(0deg) rotateX(0deg); }
+    25% { transform: perspective(500px) rotateY(90deg) rotateX(20deg); }
+    50% { transform: perspective(500px) rotateY(180deg) rotateX(0deg); }
+    75% { transform: perspective(500px) rotateY(270deg) rotateX(-20deg); }
+    100% { transform: perspective(500px) rotateY(360deg) rotateX(0deg); }
+}
+
+.hero-section h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.hero-section p {
+    font-size: 1.3rem;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+/* --- Global Section Styling --- */
+.section {
+    padding: 80px 0; /* Vertical padding for all sections */
+    background-color: var(--section-bg-light);
+    transition: background-color 0.5s ease;
+    position: relative; /* Needed for particle effects */
+    overflow: hidden; /* Ensure particles don't overflow */
+}
+body.dark-mode .section {
+    background-color: var(--section-bg-dark);
+}
+/* Alternate background for visual separation between sections */
+.section.alt-background {
+    background-color: var(--alt-section-bg-light);
+}
+body.dark-mode .section.alt-background {
+    background-color: var(--alt-section-bg-dark);
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--heading-color-light);
+}
+body.dark-mode .section-title {
+    color: var(--heading-color-dark);
+}
+.section-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-color-light);
+}
+body.dark-mode .section-subtitle {
+    color: var(--text-color-dark);
+}
+.section-sub-title { /* For sub-headings within sections (e.g., "Meet Our Team") */
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: var(--heading-color-light);
+}
+body.dark-mode .section-sub-title {
+    color: var(--heading-color-dark);
+}
+
+/* --- Interactive Buttons --- */
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px; /* Pill-shaped buttons */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 5px; /* Spacing between multiple buttons */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+/* Ripple effect on button hover */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out, top 0.4s ease-in-out, left 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.btn:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 2px solid var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+    color: #fff;
+    transform: translateY(-3px); /* Lifts button on hover */
+    box-shadow: 0 6px 20px rgba(255, 115, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: 2px solid var(--secondary-color);
+}
+.btn-secondary:hover {
+    background-color: var(--secondary-hover-color);
+    border-color: var(--secondary-hover-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
+}
+
+/* --- Learn More Section Styling --- */
+.section-item {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+/* Alternating content order: image on left for odd, right for even */
+.section-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.section-item:nth-child(even) .section-details {
+    text-align: right; /* Align text to the right for even items */
+}
+
+.section-item .section-icon-container {
+    flex: 1; /* Takes equal space in flex layout */
+    text-align: center;
+    padding: 15px;
+}
+.section-item .section-icon {
+    font-size: 5rem; /* Large icons */
+    color: var(--icon-color-light); /* Uses theming for icon color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+body.dark-mode .section-item .section-icon {
+    color: var(--icon-color-dark);
+}
+.section-item:hover .section-icon {
+    transform: scale(1.1) rotate(5deg); /* Scales and rotates icon on hover */
+    color: var(--primary-hover-color); /* Subtle color change */
+}
+
+.section-item .section-details {
+    flex: 1;
+    padding: 15px;
+    color: var(--text-color-light);
+}
+body.dark-mode .section-item .section-details {
+    color: var(--text-color-dark);
+}
+.section-item h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--heading-color-light);
+}
+body.dark-mode .section-item h3 {
+    color: var(--heading-color-dark);
+}
+.section-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- Services Section Styling --- */
+.service-category {
+    margin-bottom: 60px; /* Space between different service categories */
+}
+.service-category:last-child {
+    margin-bottom: 0;
+}
+.category-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--primary-color); /* Category titles use primary color */
+}
+.service-detail-card {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+.service-icon-large-container {
+    padding: 20px;
+}
+.large-service-icon {
+    font-size: 6rem; /* Very large icons for service details */
+    color: var(--icon-color-light);
+    transition: transform 0.4s ease, color 0.4s ease;
+    display: inline-block;
+}
+body.dark-mode .large-service-icon {
+    color: var(--icon-color-dark);
+}
+.service-detail-card:hover .large-service-icon {
+    transform: scale(1.08) rotateY(10deg); /* 3D rotation effect on hover */
+}
+
+.service-content h4 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--heading-color-light);
+}
+body.dark-mode .service-content h4 {
+    color: var(--heading-color-dark);
+}
+.service-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-color-light);
+}
+body.dark-mode .service-content p {
+    color: var(--text-color-dark);
+}
+.service-content h5 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary-color); /* Sub-headings use primary color */
+}
+.service-content ul {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+}
+.service-content ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-color-light);
+}
+body.dark-mode .service-content ul li {
+    color: var(--text-color-dark);
+}
+.service-content ul li i {
+    color: var(--primary-color); /* Checkmark icons use primary color */
+    margin-right: 10px;
+}
+
+/* --- Partners Section Styling --- */
+.partners-carousel-container {
+    width: 100%;
+    overflow: hidden; /* Hide overflowing logos outside the track */
+    white-space: nowrap; /* Keep logos on a single line */
+    padding: 40px 0;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.05); /* Subtle inner shadow */
+    border-radius: 15px;
+    background: var(--card-background-light); /* Apply glassmorphism background */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border-color-light);
+}
+body.dark-mode .partners-carousel-container {
+    background: var(--card-background-dark);
+    border: 1px solid var(--border-color-dark);
+}
+
+.partners-carousel-track {
+    display: inline-block; /* Allows content to flow horizontally */
+    animation: scroll-left 30s linear infinite; /* Continuous horizontal scroll */
+    padding: 0 20px; /* Padding for logos */
+}
+
+.partners-carousel-track:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+
+.partner-logo {
+    display: inline-block; /* Display logos inline */
+    height: 80px; /* Fixed height for logos */
+    margin: 0 30px; /* Space between logos */
+    object-fit: contain; /* Ensure logos fit without distortion */
+    filter: grayscale(100%); /* Start in grayscale */
+    opacity: 0.7; /* Slightly faded */
+    transition: all 0.3s ease-in-out;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%); /* Full color on hover */
+    opacity: 1; /* Fully opaque on hover */
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Scrolls half the width of the duplicated track */
+}
+
+/* --- About Us Section Styling --- */
+.about-section {
+    margin-bottom: 60px;
+}
+.about-section img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.about-content {
+    padding: 20px;
+    color: var(--text-color-light);
+}
+body.dark-mode .about-content {
+    color: var(--text-color-dark);
+}
+.about-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--heading-color-light);
+}
+body.dark-mode .about-content h3 {
+    color: var(--heading-color-dark);
+}
+.about-content p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.team-member-card {
+    padding: 25px;
+}
+.team-member-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid var(--primary-color); /* Border uses primary color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.team-member-img:hover {
+    transform: scale(1.05) rotate(-3deg); /* Slight scale and rotate on hover */
+}
+.team-member-card h4 {
+    margin-top: 15px;
+    font-size: 1.6rem;
+    color: var(--heading-color-light);
+}
+body.dark-mode .team-member-card h4 {
+    color: var(--heading-color-dark);
+}
+.team-member-card .text-muted {
+    color: var(--text-color-light) !important; /* Override Bootstrap's text-muted to follow theme */
+    font-size: 0.95rem;
+}
+body.dark-mode .team-member-card .text-muted {
+    color: var(--text-color-dark) !important;
+}
+
+/* --- Contact Section Styling --- */
+#main-contact-form {
+    padding: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#main-contact-form label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: var(--text-color-light);
+}
+body.dark-mode #main-contact-form label {
+    color: var(--text-color-dark);
+}
+#main-contact-form .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--input-border-light);
+    border-radius: 8px;
+    background-color: var(--input-bg-light);
+    color: var(--text-color-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+body.dark-mode #main-contact-form .form-control {
+    border: 1px solid var(--input-border-dark);
+    background-color: var(--input-bg-dark);
+    color: var(--text-color-dark);
+}
+#main-contact-form .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 115, 0, 0.2); /* Focus ring with primary color */
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color-light);
+}
+body.dark-mode .contact-info {
+    color: var(--text-color-dark);
+}
+.contact-info .fas {
+    color: var(--primary-color); /* Icons use primary color */
+    margin-right: 10px;
+}
+.contact-info a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+body.dark-mode .contact-info a {
+    color: var(--text-color-dark);
+}
+.contact-info a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* --- Custom Message Box (replaces browser alerts/redirects for form submission) --- */
+.message-box {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--modal-backdrop-light); /* Semi-transparent background */
+    z-index: 1050; /* Above all other content */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade in/out */
+}
+body.dark-mode .message-box {
+    background: var(--modal-backdrop-dark);
+}
+.message-box.show {
+    display: flex; /* Makes it visible */
+    opacity: 1;
+    visibility: visible;
+}
+.message-box-content {
+    padding: 30px;
+    text-align: center;
+    max-width: 400px;
+    transform: translateY(-20px); /* Starts slightly above center */
+    transition: transform 0.3s ease; /* Slides down into view */
+}
+.message-box.show .message-box-content {
+    transform: translateY(0); /* Ends at center */
+}
+.message-box-content p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    color: var(--text-color-light);
+}
+body.dark-mode .message-box-content p {
+    color: var(--text-color-dark);
+}
+
+/* --- Footer Styling --- */
+.footer-container {
+    background-color: var(--footer-bg-light);
+    color: var(--footer-text-light);
+    font-size: 0.9rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    padding: 20px 15px; /* Added vertical padding for better spacing */
+}
+body.dark-mode .footer-container {
+    background-color: var(--footer-bg-dark);
+    color: var(--footer-text-dark);
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0; /* Vertical margin for stacked sections on small screens */
+}
+.footer-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+.footer-container .vertical-line {
+    width: 1px;
+    background-color: var(--footer-text-light);
+    height: 100px;
+    margin: 0 40px; /* Horizontal margin for separators */
+    opacity: 0.6;
+}
+body.dark-mode .footer-container .vertical-line {
+    background-color: var(--footer-text-dark);
+}
+.list-style {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.list-style li {
+    margin-bottom: 8px;
+}
+.list-style li:last-child {
+    margin-bottom: 0;
+}
+.praix-link {
+    color: var(--footer-text-light);
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+body.dark-mode .praix-link {
+    color: var(--footer-text-dark);
+}
+.praix-link:hover {
+    color: var(--primary-color); /* Highlight on hover */
+    text-decoration: underline;
+}
+.footer-section h5 {
+    font-size: 1.3rem;
+    color: var(--primary-color); /* Footer headings use primary color */
+    margin-bottom: 15px;
+}
+.footer-section p {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+.copyright {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* --- Theme Toggle Button --- */
+.theme-toggle-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1001; /* High z-index to stay on top */
+}
+body.dark-mode .theme-toggle-button {
+    background-color: var(--primary-color-dark);
+}
+.theme-toggle-button:hover {
+    transform: translateY(-5px) scale(1.05); /* Lifts and scales on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.theme-toggle-button #theme-icon {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* --- AOS Overrides for Smoother Integration --- */
+/* Ensures elements start hidden and animate in via AOS */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* --- Particle Effect for sections (optional, can apply to specific sections) --- */
+/* Example for Learn More section */
+#learn-more::before { /* Using ::before for a subtle background particle effect */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Subtle dots using radial gradient. Colors from logo palette for branding. */
+    background-image: radial-gradient(circle, var(--accent-light-blue-purple) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: moveParticles 60s linear infinite;
+    opacity: 0.1; /* Very subtle */
+    z-index: -1;
+}
+body.dark-mode #learn-more::before {
+    background-image: radial-gradient(circle, var(--accent-dark-blue) 1px, transparent 1px);
+    opacity: 0.2;
+}
+
+@keyframes moveParticles {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100vw 100vh;
+    }
+}
+
+
+/* --- Responsive Design (Media Queries) --- */
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--navbar-bg-light);
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    body.dark-mode .navbar-collapse {
+        background-color: var(--navbar-bg-dark);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .navbar-nav .nav-item {
+        text-align: center;
+        margin: 10px 0;
+    }
+    /* Stack sections vertically on tablets */
+    .section-item {
+        flex-direction: column !important;
+    }
+    /* Center text for stacked items */
+    .section-item:nth-child(even) .section-details {
+        text-align: center;
+    }
+    .section-item .section-details {
+        text-align: center;
+    }
+    /* Ensure service detail cards stack correctly */
+    .service-detail-card .col-md-4, .service-detail-card .col-md-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .service-content ul {
+        text-align: left; /* Keep list items readable */
+        padding-left: 20px; /* Add some padding for list items */
+    }
+    /* Stack about section content */
+    .about-section {
+        flex-direction: column !important;
+    }
+    .about-section img {
+        margin-bottom: 20px; /* Space between image and text */
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 60px; /* Adjust padding for smaller navbar on mobile */
+    }
+    .navbar-brand .logo-animation {
+        width: 50px;
+        height: 50px;
+    }
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .section-subtitle {
+        font-size: 1.05rem; /* Slightly smaller for better fit */
+    }
+    .section-sub-title {
+        font-size: 2rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .section-item .section-icon {
+        font-size: 4rem; /* Smaller icons for mobile */
+    }
+    .large-service-icon {
+        font-size: 5rem; /* Adjust large icons for mobile */
+    }
+    .team-member-card {
+        padding: 20px;
+    }
+    .footer-container .vertical-line {
+        display: none; /* Hide vertical lines on very small screens to save space */
+    }
+    .footer-section, .list-style {
+        margin-bottom: 20px; /* Add more space between stacked footer sections */
+    }
+    .footer-section:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .hero-section h1 {
+        font-size: 2.2rem; /* Adjusted for very small screens */
+    }
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-subtitle {
+        font-size: 0.95rem; /* Even smaller for very small screens */
+    }
+    .section-sub-title {
+        font-size: 1.8rem;
+    }
+    .btn {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+    .section-item .section-icon {
+        font-size: 3.5rem; /* Smallest icons */
+    }
+    .large-service-icon {
+        font-size: 4rem; /* Smallest large icons */
+    }
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+    /* Removed loader-logo specific styling as loader is removed */
+}

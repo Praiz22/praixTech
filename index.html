@@ -1,122 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="google-site-verification" content="dzCgwXas9USQ3tQaCn1UeweBGa_e_iQU8SPjtBjIGx8" />
-    <meta name="description" content="Delivering innovative software solutions and cutting-edge graphics design to elevate your brand. Custom, user-centric, and professional services tailored to your needs.">
-    <link rel="canonical" href="https://praixTech.netlify.app/home">
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="Professional Graphics Design, Innovative Software Solutions, Full-stack Development and Design">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="praixTech.css">
+    <meta name="google-site-verification" content="dzCgwXas9USQ3tQaCn1UeweBGa_e_iQU8SPjtBjIGx8" />
+    <meta name="description" content="Delivering innovative software solutions and cutting-edge graphics design to elevate your brand. Custom, user-centric, and professional services tailored to your needs.">
+    <link rel="canonical" href="https://praixTech.netlify.app/">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Professional Graphics Design, Innovative Software Solutions, Full-stack Development and Design">
     <link rel="icon" href="praixTech.png">
-    <title>Praix-Tech Website</title>
+    <title>praixTECH - Creative Design Solutions</title>
+
+    <!-- Bootstrap CSS for responsive layout and components -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for a wide range of vector icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- AOS CSS for Animate On Scroll effects -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Google Fonts for typography: 'Inter' for body text, 'Orbitron' for headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS file for main styling and overrides -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
-        <div class="background-container">
-             </div>
-             <header>
-        <div class="navigation">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="services.html" class="dropbtn">Design Services ˅</a>
-                    <div class="dropdown-content">
-                        <a href="services.html #Web">Web Design</a>
-                        <a href="services.html #Product">Product Design</a>
-                        <a href="services.html #Digital">Digital Marketing</a>
-                    </div>
-                </li>
-                <li><a href=" https://praixtech-portfolio.netlify.app/">Portfolio</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+    <!-- Theme Toggle Button -->
+    <!-- Button to switch between light and dark modes, positioned fixed on the screen -->
+    <button id="theme-toggle" class="theme-toggle-button">
+        <i id="theme-icon" class="fas fa-sun"></i>
+    </button>
+
+    <!-- Navigation Bar: Fixed at the top, uses Bootstrap's classes and custom glassmorphism styling. -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top glassmorphism">
+        <a class="navbar-brand" href="#hero">
+            <!-- praixTECH logo: Custom class for animation and responsive sizing. -->
+            <img src="praixTech.png" alt="praixTech Logo" class="logo-animation">
+        </a>
+        <!-- Navbar Toggler for mobile responsiveness -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links: Collapse into a hamburger menu on smaller screens -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li> <!-- New Partners Nav Link -->
+                <!-- External link to the portfolio, opens in a new tab -->
+                <li class="nav-item"><a class="nav-link" href="https://praixtech-portfolio.netlify.app/" target="_blank">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
             </ul>
         </div>
-    </header>
-    <div class="container2">
-        <div class="overlay1"></div>
-        <div class="content">
-            <img src="praixTech.png" alt="praixTECH Logo" class="logo">
-            <h1>Creative Design Solutions,<br>From Concept To Delivery.</h1>
+    </nav>
+
+    <!-- Hero Section: The main introductory section of the website.
+         Features a dynamic background, animated text, and primary call to action. -->
+    <section class="hero-section d-flex align-items-center justify-content-center text-center" id="hero">
+        <!-- Overlay for better text readability on top of the background -->
+        <div class="overlay"></div>
+        <div class="container content" data-aos="fade-up" data-aos-delay="200">
+            <!-- Hero section logo with 3D rotation animation -->
+            <img src="praixTech.png" alt="praixTech Logo" class="hero-logo rotated-logo">
+            <!-- Main heading with dynamic typing effect -->
+            <h1 class="gradient-text">Creative Design Solutions,<br>From Concept To Delivery.</h1>
+            <!-- Subtitle describing the company's offerings -->
             <p>We provide exceptional web, mobile, and technology services, tailored to meet your goals.</p>
-            <a href="#learnMore"><button class="top-button">Learn More</button></a>
-        </div>
-    </div>
-    <section id="learnMore">
-    <div class="container">
-        <div class="director-section">
-                <img src="praixTech.png">
-                <div class="director-info"></div>
-                <h3>Welcome to Praix Tech Website,</h3>
-                <p class="text">Where Creativity is Beyond Imagination.
-                    Lets turn your ideas into mind-capturing Designs!
-                </p></div>
-            <div class="director-section">
-                <img src="frame.png" width="70%" height="auto">
-                <div class="director-info">
-                <h3>View Our Outstanding Portfolios</h3>
-                    <p class ="text">Explore our diverse portfolio showcasing our expertise in graphic design, 
-                  web development, and computer consulting.
-                    </p>
-                    </div></div>
-              <div class="director-section">
-              <img src="interior.jpg" alt="praix" width="100%" height="auto">
-              <div class="director-info"></div>
-              <h3>Understand Our Approach</h3>
-                 <p class ="text">Our Commitment to quality and customer satisfaction is reflected in 
-                  every project we undertake. Dive into our work and
-                   discover how we can help bring your vision to life.</p>
-        </div>
-            <div class="director-section">
-                <img src="happy.jpg" width="70%" height="auto">
-                <div class="director-info">
-                <h3>Why you should choose us?</h3>
-                    <p class ="text">
-                     We are the best at what we do, we incorporate efficiency and 
-                    speed to our projects which improve our overall productivity</p>
-                    </div></div>
+            <!-- Call to action button, animated on hover -->
+            <a href="#learn-more" class="btn btn-primary interactive-button">Learn More</a>
         </div>
     </section>
-        <a href="services.html"><button class="bn632-hover bn19">Click Here To Check Out Our Services</button></a>
-    </main>
-                                  <div class="footer-container">
-    <footer>
-        <div class="footer-section">
-            <img src="praixTech.png" alt="praixTech">
-            <p class="praix">Creativity beyond Imagination</p>
+
+    <!-- Learn More Section: Provides an overview of praixTECH's approach and benefits.
+         Uses animated SVG icons instead of images for a modern, scalable look. -->
+    <section id="learn-more" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Welcome to praixTECH</h2>
+            <p class="section-subtitle" data-aos="fade-up">Where Creativity is Beyond Imagination. Let's turn your ideas into mind-capturing Designs!</p>
+
+            <!-- Section Item 1: Innovative Solutions -->
+            <div class="row section-item glassmorphism" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6 order-md-1">
+                    <div class="section-icon-container">
+                        <!-- Font Awesome icon for "magic" effect -->
+                        <i class="fas fa-magic section-icon animated-element"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-2 section-details">
+                    <h3>Innovative Solutions</h3>
+                    <p>We combine cutting-edge technology with creative flair to deliver solutions that are not only functional but also visually stunning.</p>
+                </div>
+            </div>
+
+            <!-- Section Item 2: Outstanding Portfolios (Content order reversed for alternating layout) -->
+            <div class="row section-item glassmorphism" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6 order-md-2">
+                    <div class="section-icon-container">
+                        <!-- Font Awesome icon for "folder-open" to suggest portfolio -->
+                        <i class="fas fa-folder-open section-icon animated-element"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1 section-details text-right">
+                    <h3>View Our Outstanding Portfolios</h3>
+                    <p>Explore our diverse portfolio showcasing our expertise in graphic design, web development, and computer consulting.</p>
+                </div>
+            </div>
+
+            <!-- Section Item 3: Our Approach -->
+            <div class="row section-item glassmorphism" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-md-6 order-md-1">
+                    <div class="section-icon-container">
+                        <!-- Font Awesome icon for "lightbulb" to suggest ideas/approach -->
+                        <i class="fas fa-lightbulb section-icon animated-element"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-2 section-details">
+                    <h3>Understand Our Approach</h3>
+                    <p>Our commitment to quality and customer satisfaction is reflected in every project we undertake. Dive into our work and discover how we can help bring your vision to life.</p>
+                </div>
+            </div>
+
+            <!-- Section Item 4: Why Choose Us? (Content order reversed for alternating layout) -->
+            <div class="row section-item glassmorphism" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-6 order-md-2">
+                    <div class="section-icon-container">
+                        <!-- Font Awesome icon for "star" to indicate excellence -->
+                        <i class="fas fa-star section-icon animated-element"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1 section-details text-right">
+                    <h3>Why you should choose us?</h3>
+                    <p>We are the best at what we do, we incorporate efficiency and speed to our projects which improve our overall productivity.</p>
+                </div>
+            </div>
+            <!-- Button to navigate to the Services section -->
+            <div class="text-center mt-5" data-aos="zoom-in">
+                <a href="#services" class="btn btn-secondary interactive-button">Check Out Our Services</a>
+            </div>
         </div>
-        <div class="vertical-line"></div>
-        <ul class="list-style">
-            <li><a href="services.html#Graphic" class="praix">Graphics Design</a></li>
-            <li><a href="services.html#Web" class="praix">Web and App Development</a></li>
-            <li><a href="services.html#Product" class="praix">Product Design</a></li>
-            <li><a href="services.html#Digital" class="praix">Online Marketing</a></li>
-            <li><a href="contact.html" class="praix">Contact Us</a></li>
-        </ul>
-        <div class="vertical-line"></div>
-        <div class="footer-section">
-            <h5>Get In Touch</h5>
-            <p class="praix">No 5 Alayande Compound,<br>Orita-Naira, Ogbomoso</p>
-            <p>
-                <a href="tel:09045048954" class="praixis">+234(0) 90-450-489-54</a><br>
-                <a href="tel:08164208524" class="praixis">+234(0) 816-420-8524</a>
-            </p>
-            <p>Click to send a mail to<br><a href="mailto:praiseola22@gmail.com" class="praixis">praiseola22@gmail.com</a></p>
-            <p class="praix">&copy; 2024 praixTECH</p>
+    </section>
+
+    <!-- Services Section: Detailed breakdown of services offered.
+         Each service has a dedicated card with a large SVG icon. -->
+    <section id="services" class="section alt-background">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Our Services</h2>
+            <p class="section-subtitle" data-aos="fade-up">Explore our professional software development and graphics design services tailored to meet your needs.</p>
+
+            <!-- Service Category: Graphics Design -->
+            <div class="service-category" id="graphic-design">
+                <h3 class="category-title" data-aos="fade-right">Graphics Design</h3>
+                <div class="row service-detail-card glassmorphism" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-4 text-center service-icon-large-container">
+                        <!-- Large Font Awesome icon for Graphics Design -->
+                        <i class="fas fa-paint-brush large-service-icon animated-element"></i>
+                    </div>
+                    <div class="col-md-8 service-content">
+                        <h4>Unlock Your Brand's Potential</h4>
+                        <p>At praixTECH, we specialize in creating visually compelling and market-ready designs that elevate your brand's presence.</p>
+                        <h5>What We Offer:</h5>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Brand Identity Design & Logo Creation</li>
+                            <li><i class="fas fa-check-circle"></i> Marketing Collaterals (Business Cards, Flyers, Brochures)</li>
+                            <li><i class="fas fa-check-circle"></i> Social Media Graphics & Web Banners</li>
+                            <li><i class="fas fa-check-circle"></i> Infographics and Illustrations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Category: Product Design -->
+            <div class="service-category" id="product-design">
+                <h3 class="category-title" data-aos="fade-right">Product Design</h3>
+                <div class="row service-detail-card glassmorphism" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-4 text-center service-icon-large-container">
+                        <!-- Large Font Awesome icon for Product Design -->
+                        <i class="fas fa-cube large-service-icon animated-element"></i>
+                    </div>
+                    <div class="col-md-8 service-content">
+                        <h4>Transform Concepts into Innovation</h4>
+                        <p>We transform your ideas into innovative and market-ready products with a user-centric approach.</p>
+                        <h5>What We Offer:</h5>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> User-Centric Research & Concept Development</li>
+                            <li><i class="fas fa-check-circle"></i> Detailed Design & Prototyping</li>
+                            <li><i class="fas fa-check-circle"></i> Visual & Interaction Excellence</li>
+                            <li><i class="fas fa-check-circle"></i> Engineering & Production Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Category: Online Marketing -->
+            <div class="service-category" id="online-marketing">
+                <h3 class="category-title" data-aos="fade-right">Online Marketing</h3>
+                <div class="row service-detail-card glassmorphism" data-aos="fade-up" data-aos-delay="300">
+                    <div class="col-md-4 text-center service-icon-large-container">
+                        <!-- Large Font Awesome icon for Online Marketing -->
+                        <i class="fas fa-bullhorn large-service-icon animated-element"></i>
+                    </div>
+                    <div class="col-md-8 service-content">
+                        <h4>Drive Sales and Enhance Presence</h4>
+                        <p>Elevate your business with our exceptional online marketing strategies that drive sales and enhance user experience.</p>
+                        <h5>What We Offer:</h5>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Comprehensive Market Research</li>
+                            <li><i class="fas fa-check-circle"></i> Strategic Concept Development</li>
+                            <li><i class="fas fa-check-circle"></i> Robust Design & Prototyping</li>
+                            <li><i class="fas fa-check-circle"></i> Thorough Testing & Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Category: Web Development & SEO -->
+            <div class="service-category" id="web-development">
+                <h3 class="category-title" data-aos="fade-right">Web Development & SEO</h3>
+                <div class="row service-detail-card glassmorphism" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-md-4 text-center service-icon-large-container">
+                        <!-- Large Font Awesome icon for Web Development -->
+                        <i class="fas fa-laptop-code large-service-icon animated-element"></i>
+                    </div>
+                    <div class="col-md-8 service-content">
+                        <h4>Cutting-Edge Web Presence</h4>
+                        <p>Transform your digital presence with visually stunning, user-friendly websites that drive engagement and conversions.</p>
+                        <h5>What We Offer:</h5>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Custom Web Design & E-commerce Solutions</li>
+                            <li><i class="fas fa-check-circle"></i> Responsive Design across all Devices</li>
+                            <li><i class="fas fa-check-circle"></i> User Experience (UX) & User Interface (UI) Design</li>
+                            <li><i class="fas fa-check-circle"></i> On-page and Off-page SEO, Keyword Optimization, SEO Audits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Category: Content Creation -->
+            <div class="service-category" id="content-creation">
+                <h3 class="category-title" data-aos="fade-right">Content Creation</h3>
+                <div class="row service-detail-card glassmorphism" data-aos="fade-up" data-aos-delay="500">
+                    <div class="col-md-4 text-center service-icon-large-container">
+                        <!-- Large Font Awesome icon for Content Creation -->
+                        <i class="fas fa-pen-nib large-service-icon animated-element"></i>
+                    </div>
+                    <div class="col-md-8 service-content">
+                        <h4>Engaging and Impactful Content</h4>
+                        <p>From compelling copy to engaging multimedia, we craft content that resonates with your audience.</p>
+                        <h5>What We Offer:</h5>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Copywriting for Websites and Marketing</li>
+                            <li><i class="fas fa-check-circle"></i> Blog Writing and Article Development</li>
+                            <li><i class="fas fa-check-circle"></i> Multimedia Production (e.g., short videos, animations)</li>
+                            <li><i class="fas fa-check-circle"></i> Content Strategy and Planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Category: Project & Research -->
+            <div class="service-category" id="project-research">
+                <h3 class="category-title" data-aos="fade-right">Project & Research</h3>
+                <div class="row service-detail-card glassmorphism" data-aos="fade-up" data-aos-delay="600">
+                    <div class="col-md-4 text-center service-icon-large-container">
+                        <!-- Large Font Awesome icon for Project & Research -->
+                        <i class="fas fa-flask large-service-icon animated-element"></i>
+                    </div>
+                    <div class="col-md-8 service-content">
+                        <h4>Structured Project Management & In-depth Research</h4>
+                        <p>We provide comprehensive project management and research services to ensure successful outcomes from concept to completion.</p>
+                        <h5>What We Offer:</h5>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Project Planning & Execution</li>
+                            <li><i class="fas fa-check-circle"></i> Research & Analysis (Market, User, Competitor)</li>
+                            <li><i class="fas fa-check-circle"></i> Prototyping & Feasibility Studies</li>
+                            <li><i class="fas fa-check-circle"></i> Reporting, Editing, Printing & Binding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section: Features a fluid, continuously moving carousel of partner logos. -->
+    <section id="partners" class="section alt-background">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Our Esteemed Partners</h2>
+            <p class="section-subtitle" data-aos="fade-up">We are proud to collaborate with leading companies and individuals who share our vision for excellence.</p>
+
+            <div class="partners-carousel-container" data-aos="zoom-in">
+                <div class="partners-carousel-track">
+                    <!-- Placeholder Partner Logos - Replace with actual partner images if available -->
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+A" alt="Partner A" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+B" alt="Partner B" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+C" alt="Partner C" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+D" alt="Partner D" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+E" alt="Partner E" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+F" alt="Partner F" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+G" alt="Partner G" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+H" alt="Partner H" class="partner-logo">
+                    <!-- Duplicate logos to ensure continuous loop without a visible jump -->
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+A" alt="Partner A" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+B" alt="Partner B" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+C" alt="Partner C" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+D" alt="Partner D" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+E" alt="Partner E" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+F" alt="Partner F" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+G" alt="Partner G" class="partner-logo">
+                    <img src="https://placehold.co/150x80/000000/FFFFFF?text=Partner+H" alt="Partner H" class="partner-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section: Provides information about the company and its team members. -->
+    <section id="about-us" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">About Us</h2>
+            <p class="section-subtitle" data-aos="fade-up">Welcome to praixTECH! We are a passionate team dedicated to creating stunning and responsive digital designs.</p>
+
+            <!-- Who We Are subsection -->
+            <div class="row about-section align-items-center mb-5">
+                <div class="col-md-6" data-aos="fade-right">
+                    <!-- Placeholder image for "Who We Are", consider replacing with an SVG illustration if available -->
+                    <img src="https://placehold.co/600x400/CCCCCC/333333?text=Who+We+Are" alt="Who We Are" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-md-6 about-content" data-aos="fade-left">
+                    <h3>Who We Are</h3>
+                    <p>Our mission is to deliver high-quality digital solutions that help our clients achieve their goals. With years of experience in the industry, we pride ourselves on our ability to turn ideas into reality. Whether you need a simple website or a complex web application, we have the skills and expertise to make it happen.</p>
+                </div>
+            </div>
+
+            <!-- Meet Our Team subsection -->
+            <h3 class="section-sub-title text-center" data-aos="fade-down">Meet Our Team</h3>
+            <div class="row team-members justify-content-center">
+                <!-- Team Member 1: Praise Oladokun -->
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="team-member-card glassmorphism text-center">
+                        <img src="boss2.jpg" alt="Praise Oladokun" class="team-member-img rounded-circle mb-3">
+                        <h4>Praise Oladokun</h4>
+                        <p class="text-muted">Lead Developer & CEO</p>
+                        <!-- Portfolio Button for Praise Oladokun -->
+                        <a href="https://praixtech-portfolio.netlify.app/" target="_blank" class="btn btn-sm btn-primary interactive-button mt-3">View Portfolio</a>
+                    </div>
+                </div>
+                <!-- Team Member 2: Quadri -->
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="team-member-card glassmorphism text-center">
+                        <img src="dj.jpg" alt="Quadri" class="team-member-img rounded-circle mb-3">
+                        <h4>Quadri</h4>
+                        <p class="text-muted">Project Manager</p>
+                    </div>
+                </div>
+                <!-- Team Member 3: Benjamin -->
+                <div class="col-md-4 col-sm-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-member-card glassmorphism text-center">
+                        <img src="benji.png" alt="Benjamin" class="team-member-img rounded-circle mb-3">
+                        <h4>Benjamin</h4>
+                        <p class="text-muted">UI/UX Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section: Contains the contact form and contact information. -->
+    <section id="contact" class="section alt-background">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Get In Touch</h2>
+            <p class="section-subtitle" data-aos="fade-up">Have a project in mind or just want to say hello? Send us a message!</p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Contact Form: Uses FormSubmit.co for backend, with custom styling and validation. -->
+                    <form id="main-contact-form" action="https://formsubmit.co/praiseola22@gmail.com" method="POST" class="glassmorphism p-4" data-aos="fade-up" data-aos-delay="200">
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Hidden input to redirect to a specific URL after successful submission.
+                             This will be overridden by custom JS handling to show a message box. -->
+                        <input type="hidden" name="_next" value="https://praixtech.netlify.app/thank-you.html"> 
+
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Your Phone Number (Optional):</label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block interactive-button mt-4">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Custom Message Box: Displays submission feedback without a page reload or browser alert. -->
+            <div id="response-message-box" class="message-box">
+                <div class="message-box-content glassmorphism">
+                    <p id="response-message-text"></p>
+                    <button class="btn btn-primary" onclick="hideMessageBox()">Close</button>
+                </div>
+            </div>
+
+            <!-- Additional Contact Information -->
+            <div class="contact-info mt-5 text-center" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="section-sub-title">Connect With Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> No 5 Alayande Compound, Orita-Naira, Ogbomoso, Oyo, Nigeria
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+2349045048954">+234(0) 90-450-489-54</a> |
+                    <a href="tel:+2348164208524">+234(0) 816-420-8524</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:praiseola22@gmail.com">praiseola22@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Contains copyright information and contact details. -->
+    <footer class="footer-container py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-around align-items-center">
+            <div class="footer-section text-center mb-3 mb-md-0">
+                <img src="praixTech.png" alt="praixTech Logo" class="footer-logo mb-2">
+                <p class="praix">Creativity beyond Imagination</p>
+            </div>
+            <!-- Vertical line separator, hidden on smaller screens -->
+            <div class="vertical-line mx-4 d-none d-md-block"></div> 
+            <ul class="list-unstyled list-style text-center text-md-left mb-3 mb-md-0">
+                <li><a href="#graphic-design" class="praix-link">Graphics Design</a></li>
+                <li><a href="#web-development" class="praix-link">Web and App Development</a></li>
+                <li><a href="#product-design" class="praix-link">Product Design</a></li>
+                <li><a href="#online-marketing" class="praix-link">Online Marketing</a></li>
+                <li><a href="#contact" class="praix-link">Contact Us</a></li>
+            </ul>
+            <!-- Vertical line separator, hidden on smaller screens -->
+            <div class="vertical-line mx-4 d-none d-md-block"></div> 
+            <div class="footer-section text-center text-md-left">
+                <h5>Get In Touch</h5>
+                <p class="praix">No 5 Alayande Compound,<br>Orita-Naira, Ogbomoso</p>
+                <p class="mb-1">
+                    <a href="tel:09045048954">+234(0) 90-450-489-54</a><br>
+                    <a href="tel:+2348164208524">+234(0) 816-420-8524</a>
+                </p>
+                <p>Click to send a mail to<br><a href="mailto:praiseola22@gmail.com" class="praix-link">praiseola22@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p class="praix copyright">&copy; <span id="current-year"></span> praixTECH. All rights reserved.</p>
         </div>
     </footer>
-</div>
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/66ae153d1601a2195ba05989/1i4c05usl';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
+
+    <!-- Bootstrap JS (jQuery first, then Popper.js, then Bootstrap's own JS) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- AOS JS for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript for interactive features -->
+    <script src="script.js"></script>
+
+    <!-- Tawk.to Live Chat Script: Integrated for real-time customer support. -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/66ae153d1601a2195ba05989/1i4c05usl';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
 </body>
+
 </html>
