@@ -2,7 +2,13 @@
 
 /* --- Root Variables for Theming (Light/Dark Mode) --- */
 :root {
-    /* Light Mode Palette: White/Light dominant, with orange and dark blue accents from logo */
+    /* Brand Colors as defined by the user: */
+    --brand-orange: #E17600; /* Primary/Accent */
+    --brand-light-pink: #F5B2B6; /* Accent/Subtle background */
+    --brand-light-blue: #CCCCFF; /* Accent/Subtle background */
+    --brand-deep-blue: #000066; /* Accent/Text/Darker background sections */
+
+    /* Light Mode Palette: White/Light dominant, with brand colors as accents */
     --background-color-light: #f8f9fa; /* Very light gray/off-white */
     --text-color-light: #343a40; /* Dark gray for primary text */
     --heading-color-light: #212529; /* Even darker gray for headings */
@@ -10,27 +16,23 @@
     --border-color-light: rgba(255, 255, 255, 0.4); /* Lighter border for glassmorphism */
     --box-shadow-color-light: rgba(0, 0, 0, 0.1); /* Subtle shadow */
 
-    --primary-color: #ff7300; /* Vibrant Orange (from logo: F39F22, slightly adjusted for vibrancy) */
-    --primary-hover-color: #e06200; /* Darker orange for hover */
+    --primary-color: var(--brand-orange); /* Main interactive color */
+    --primary-hover-color: #c96700; /* Darker orange for hover */
     --secondary-color: #6c757d; /* Bootstrap default secondary gray */
     --secondary-hover-color: #5a6268; /* Darker secondary for hover */
-
-    --accent-dark-blue: #1A237E; /* Dark Blue/Navy from logo */
-    --accent-light-pink: #FFC0CB; /* Light Pink from logo (subtle usage) */
-    --accent-light-blue-purple: #ADD8E6; /* Light Blue/Purple from logo (subtle usage) */
 
     --navbar-bg-light: rgba(255, 255, 255, 0.9); /* Opaque white for navbar */
     --navbar-link-light: #343a40;
     --section-bg-light: #ffffff; /* White for default sections */
-    --alt-section-bg-light: #f0f2f5; /* Light gray for alternating sections */
-    --footer-bg-light: #121518; /* Very dark gray for footer */
+    --alt-section-bg-light: var(--brand-light-blue); /* Using brand light blue for alternating sections */
+    --footer-bg-light: var(--brand-deep-blue); /* Using brand deep blue for footer */
     --footer-text-light: #e9ecef; /* Light text for footer */
     --input-bg-light: rgba(255, 255, 255, 0.8); /* Semi-transparent white for inputs */
     --input-border-light: #ced4da; /* Light gray border */
     --modal-backdrop-light: rgba(0, 0, 0, 0.5); /* Semi-transparent black for modal overlay */
     --icon-color-light: var(--primary-color); /* Icons use primary color by default */
 
-    /* Dark Mode Palette: Dark dominant, with lighter orange and dark blue accents */
+    /* Dark Mode Palette: Dark dominant, with lighter brand colors as accents */
     --background-color-dark: #121212; /* Deep dark background */
     --text-color-dark: #e0e0e0; /* Light gray for text */
     --heading-color-dark: #f8f9fa; /* Off-white for headings */
@@ -38,16 +40,14 @@
     --border-color-dark: rgba(52, 58, 64, 0.4); /* Darker border for glassmorphism */
     --box-shadow-color-dark: rgba(0, 0, 0, 0.5); /* Stronger shadow */
 
-    --primary-color-dark: #ffa040; /* Lighter Orange for dark mode visibility */
-    --primary-hover-color-dark: #ff8c2a; /* Darker lighter orange for hover */
-    --secondary-color-dark: #495057; /* Darker gray secondary */
-    --secondary-hover-color-dark: #343a40; /* Even darker secondary for hover */
+    --primary-color-dark: #ff8c2a; /* Lighter Orange for dark mode visibility (derived from brand orange) */
+    --primary-hover-color-dark: #ff7300; /* Darker lighter orange for hover */
 
     --navbar-bg-dark: rgba(33, 37, 41, 0.9); /* Opaque dark for navbar */
     --navbar-link-dark: #f8f9fa;
     --section-bg-dark: #1a1a1a; /* Darker sections */
-    --alt-section-bg-dark: #212121; /* Slightly lighter dark for alternating sections */
-    --footer-bg-dark: #0a0a0a; /* Deepest dark for footer */
+    --alt-section-bg-dark: #00004d; /* Darker version of brand deep blue for alternating sections */
+    --footer-bg-dark: #000033; /* Even deeper dark for footer */
     --footer-text-dark: #b0b0b0; /* Muted light text for footer */
     --input-bg-dark: rgba(52, 58, 64, 0.8); /* Semi-transparent dark for inputs */
     --input-border-dark: #495057; /* Darker border */
@@ -96,14 +96,14 @@ body.dark-mode h6 {
 
 /* Gradient Text for special headings */
 .gradient-text {
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-dark-blue));
+    background: linear-gradient(90deg, var(--primary-color), var(--brand-deep-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent; /* Fallback for browsers that don't support text-fill-color */
 }
 body.dark-mode .gradient-text {
-    background: linear-gradient(90deg, var(--primary-color-dark), var(--accent-light-blue-purple));
+    background: linear-gradient(90deg, var(--primary-color-dark), var(--brand-light-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -116,7 +116,8 @@ body.dark-mode .gradient-text {
     background: var(--card-background-light);
     backdrop-filter: blur(10px); /* Blurs content behind the element */
     -webkit-backdrop-filter: blur(10px); /* Vendor prefix for Safari */
-    border: 1px solid var(--border-color-light); /* Subtle border */
+    /* Border uses a lighter brand accent color */
+    border: 1px solid rgba(204, 204, 255, 0.6); /* Tinted with brand-light-blue */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 8px 32px 0 var(--box-shadow-color-light); /* Soft shadow */
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
@@ -125,7 +126,7 @@ body.dark-mode .gradient-text {
 /* Dark mode adjustments for glassmorphism */
 body.dark-mode .glassmorphism {
     background: var(--card-background-dark);
-    border: 1px solid var(--border-color-dark);
+    border: 1px solid rgba(0, 0, 102, 0.4); /* Tinted with brand-deep-blue for dark mode */
     box-shadow: 0 8px 32px 0 var(--box-shadow-color-dark);
 }
 
@@ -227,6 +228,7 @@ body.dark-mode .navbar-nav .nav-link {
     height: 100%;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat; /* Ensure no repetition */
     transition: opacity 1s ease-in-out; /* Smooth transition for background changes */
     z-index: 0; /* Keep behind overlay and content */
 }
@@ -273,16 +275,7 @@ body.dark-mode .navbar-nav .nav-link {
     height: 150px; /* Ensure height matches width for consistent rotation */
     margin-bottom: 20px;
     filter: drop-shadow(0 0 10px var(--primary-color)); /* Glow effect */
-    /* Applied 3D rotation animation */
-    animation: rotate3D 3s infinite linear; /* Adjust duration as needed */
-}
-/* No separate .rotated-logo class, apply directly to .hero-logo */
-@keyframes rotate3D {
-    0% { transform: perspective(500px) rotateY(0deg) rotateX(0deg); }
-    25% { transform: perspective(500px) rotateY(90deg) rotateX(20deg); }
-    50% { transform: perspective(500px) rotateY(180deg) rotateX(0deg); }
-    75% { transform: perspective(500px) rotateY(270deg) rotateX(-20deg); }
-    100% { transform: perspective(500px) rotateY(360deg) rotateX(0deg); }
+    /* Removed 3D rotation from here as requested */
 }
 
 .hero-section h1 {
@@ -823,7 +816,7 @@ body.dark-mode .praix-link {
 .theme-toggle-button {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px; /* Moved to bottom-left */
     background-color: var(--primary-color);
     color: #fff;
     border: none;
@@ -870,14 +863,14 @@ body.dark-mode .theme-toggle-button {
     width: 100%;
     height: 100%;
     /* Subtle dots using radial gradient. Colors from logo palette for branding. */
-    background-image: radial-gradient(circle, var(--accent-light-blue-purple) 1px, transparent 1px);
+    background-image: radial-gradient(circle, var(--brand-light-pink) 1px, transparent 1px); /* Using F5B2B6 */
     background-size: 20px 20px;
     animation: moveParticles 60s linear infinite;
     opacity: 0.1; /* Very subtle */
     z-index: -1;
 }
 body.dark-mode #learn-more::before {
-    background-image: radial-gradient(circle, var(--accent-dark-blue) 1px, transparent 1px);
+    background-image: radial-gradient(circle, var(--brand-deep-blue) 1px, transparent 1px); /* Using 000066 for dark mode particles */
     opacity: 0.2;
 }
 
@@ -1018,5 +1011,4 @@ body.dark-mode #learn-more::before {
     .contact-info p {
         font-size: 0.95rem;
     }
-    /* Removed loader-logo specific styling as loader is removed */
 }
