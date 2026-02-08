@@ -12,10 +12,14 @@
     <link rel="icon" href="praixTech.png">
     <title>praixTECH - Creative Design Solutions</title>
 
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
     <!-- Bootstrap CSS for responsive layout and components -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Font Awesome for a wide range of vector icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- AOS CSS for Animate On Scroll effects -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <!-- Google Fonts for typography: 'Inter' for body text, 'Orbitron' for headings -->
@@ -23,6 +27,141 @@
 
     <!-- Custom CSS file for main styling and overrides -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- CSP Meta Tag -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com https://cdn.jsdelivr.net https://stackpath.bootstrapcdn.com https://unpkg.com https://embed.tawk.to; style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co https://api.github.com; frame-src 'self' https://embed.tawk.to; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co;">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="praixTECH - Creative Design Solutions">
+    <meta property="og:description" content="Delivering innovative software solutions and cutting-edge graphics design to elevate your brand. Custom, user-centric, and professional services tailored to your needs.">
+    <meta property="og:image" content="https://praixtech.netlify.app/praixTech.png">
+    <meta property="og:url" content="https://praixtech.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="praixTECH">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="praixTECH - Creative Design Solutions">
+    <meta name="twitter:description" content="Delivering innovative software solutions and cutting-edge graphics design to elevate your brand. Custom, user-centric, and professional services tailored to your needs.">
+    <meta name="twitter:image" content="https://praixtech.netlify.app/praixTech.png">
+    <meta name="twitter:site" content="@praixtech">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "praixTECH",
+        "description": "Delivering innovative software solutions and cutting-edge graphics design to elevate your brand. Custom, user-centric, and professional services tailored to your needs.",
+        "url": "https://praixtech.netlify.app/",
+        "logo": "https://praixtech.netlify.app/praixTech.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+2349045048954",
+            "contactType": "Customer Service",
+            "availableLanguage": ["English"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "No 5 Alayande Compound, Orita-Naira",
+            "addressLocality": "Ogbomoso",
+            "addressRegion": "Oyo",
+            "addressCountry": "NG"
+        },
+        "sameAs": [
+            "https://twitter.com/praixtech"
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "praixTECH - Creative Design Solutions",
+        "url": "https://praixtech.netlify.app/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://praixtech.netlify.app/#contact",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Web Development and Design",
+        "provider": {
+            "@type": "Organization",
+            "name": "praixTECH"
+        },
+        "description": "Professional web development, graphics design, and digital marketing services.",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services",
+            "itemListElement": [
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Graphics Design",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Brand Identity Design"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Marketing Collaterals"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Web Development",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Custom Web Design"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "E-commerce Solutions"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -68,9 +207,36 @@
             <!-- Main heading with dynamic typing effect -->
             <h1 class="gradient-text">Creative Design Solutions,<br>From Concept To Delivery.</h1>
             <!-- Subtitle describing the company's offerings -->
-            <p>We provide exceptional web, mobile, and technology services, tailored to meet your goals.</p>
-            <!-- Call to action button, animated on hover -->
-            <a href="#learn-more" class="btn btn-primary interactive-button">Learn More</a>
+            <p class="hero-subtitle">We provide exceptional web, mobile, and technology services, tailored to meet your goals.</p>
+            
+            <!-- Enhanced CTA Section with multiple buttons -->
+            <div class="hero-cta-container">
+                <a href="#services" class="btn btn-primary interactive-button hero-cta-btn" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-rocket"></i> Get Started
+                </a>
+                <a href="#portfolio" class="btn btn-secondary interactive-button hero-cta-btn" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-eye"></i> View Portfolio
+                </a>
+                <a href="#contact" class="btn btn-outline-light hero-cta-btn" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+            </div>
+            
+            <!-- Trust indicators -->
+            <div class="trust-indicators" data-aos="fade-up" data-aos-delay="700">
+                <div class="trust-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure & Reliable</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-clock"></i>
+                    <span>24/7 Support</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-star"></i>
+                    <span>5-Star Reviews</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -463,9 +629,9 @@
     </footer>
 
     <!-- Bootstrap JS (jQuery first, then Popper.js, then Bootstrap's own JS) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Ww+6QwVBIId2e5j5uISQiZf" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!-- AOS JS for scroll animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JavaScript for interactive features -->

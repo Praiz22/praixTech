@@ -3,29 +3,648 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio.css">
-    <title>Praix Grafix Portfolio</title>
+    <meta name="description" content="praixTECH portfolio showcasing web development, mobile apps, and design projects for medical, engineering, beauty, travel, rental, and education industries">
+    <meta name="keywords" content="web development portfolio, mobile app portfolio, graphic design portfolio, medical website, engineering app, beauty salon website, travel booking, rental platform, school management">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="praixTECH Portfolio - Creative Design Solutions">
+    <meta property="og:description" content="Showcasing innovative web development, mobile applications, and graphic design projects across multiple industries">
+    <meta property="og:image" content="https://praixtech.netlify.app/praixTech.png">
+    <meta property="og:url" content="https://praixtech.netlify.app/portfolio.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="praixTECH">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="praixTECH Portfolio - Creative Design Solutions">
+    <meta name="twitter:description" content="Showcasing innovative web development, mobile applications, and graphic design projects across multiple industries">
+    <meta name="twitter:image" content="https://praixtech.netlify.app/praixTech.png">
+    <meta name="twitter:site" content="@praixtech">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <title>Portfolio - praixTECH Creative Design Solutions</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- CSP Meta Tag -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://code.jquery.com https://cdn.jsdelivr.net https://stackpath.bootstrapcdn.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com https://cdnjs.cloudflare.com https://unpkg.com; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; connect-src 'self' https://formsubmit.co; frame-src 'self' https://embed.tawk.to;">
 </head>
-<body class="portfolio-bg">
-    <header>
-        <div class="top-button-container">
-            <a href="index.html"><button class="top-button" >Home</button></a>
-           <a href="services.html"> <button class="top-button">Services</button></a>
-          <a href="about.html"><button class="top-button">About</button></a>  
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle-button">
+        <i id="theme-icon" class="fas fa-sun"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top glassmorphism">
+        <a class="navbar-brand" href="index.html">
+            <img src="praixTech.png" alt="praixTech Logo" class="logo-animation">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#about-us">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#partners">Partners</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+            </ul>
         </div>
-    </header>
-    <main>
-        <section>
-            <h1 class="main-title">Praix Grafix Website</h1>
-            <p class="main-description">Welcome to Praix Grafix Portfolio Website, where creativity meets innovation. Explore our diverse portfolio showcasing our expertise in graphic design, web development, and computer consulting. Our commitment to quality and customer satisfaction is reflected in every project we undertake. Dive into our work and discover how we can help bring your vision to life.</p>
-        </section>
-        <section class="portfolio-images">
-            <img src="high.png" alt="High Quality" class="responsive-img">
-            <img src="fast.png" alt="Fast Delivery" class="responsive-img">
-            <img src="sweet.png" alt="Sweet Design" class="responsive-img">
-            <img src="mock.png" alt="Mockups" class="responsive-img">
-        </section>
-        <a href="services.html"><button class="bn632-hover bn19">Click Here To Check Out Our Services</button></a>
-    </main>
+    </nav>
+
+    <!-- Portfolio Hero Section -->
+    <section class="hero-section d-flex align-items-center justify-content-center text-center" id="portfolio-hero">
+        <div class="overlay"></div>
+        <div class="container content" data-aos="fade-up" data-aos-delay="200">
+            <img src="praixTech.png" alt="praixTech Logo" class="hero-logo rotated-logo">
+            <h1 class="gradient-text">Our Portfolio</h1>
+            <p class="hero-subtitle">Discover our award-winning projects that transform businesses across industries</p>
+            <div class="portfolio-stats">
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <h3>6</h3>
+                    <p>Industries Served</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Categories -->
+    <section id="portfolio-categories" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Our Specialized Projects</h2>
+            <p class="section-subtitle" data-aos="fade-up">Each project represents our commitment to excellence and innovation</p>
+            
+            <div class="row portfolio-filters">
+                <div class="col-12">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="medical">Medical</button>
+                    <button class="filter-btn" data-filter="engineering">Engineering</button>
+                    <button class="filter-btn" data-filter="beauty">Beauty & Wellness</button>
+                    <button class="filter-btn" data-filter="travel">Travel</button>
+                    <button class="filter-btn" data-filter="rental">Rental</button>
+                    <button class="filter-btn" data-filter="education">Education</button>
+                </div>
+            </div>
+
+            <!-- Medical Projects -->
+            <div class="portfolio-grid" id="medical-projects">
+                <div class="portfolio-item medical" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/004d40/ffffff?text=MediCare+Plus" alt="MediCare Plus - Healthcare Platform" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge medical-badge">Medical</div>
+                            <h3>MediCare Plus</h3>
+                            <p class="project-description">Comprehensive healthcare management platform connecting patients with medical professionals. Features appointment scheduling, medical records management, and telemedicine capabilities.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>HL7 FHIR</span>
+                                <span>AWS</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-users"></i>
+                                    <span>10,000+ Users</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8/5 Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item medical" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/1565c0/ffffff?text=PharmaTrack" alt="PharmaTrack - Pharmacy Management" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge medical-badge">Medical</div>
+                            <h3>PharmaTrack</h3>
+                            <p class="project-description">Advanced pharmacy inventory and prescription management system. Streamlines medication tracking, dosage management, and patient safety protocols.</p>
+                            <div class="project-tech">
+                                <span>Vue.js</span>
+                                <span>Python</span>
+                                <span>PostgreSQL</span>
+                                <span>Blockchain</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>40% Efficiency Increase</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Zero Errors</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engineering Projects -->
+            <div class="portfolio-grid" id="engineering-projects">
+                <div class="portfolio-item engineering" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/2e7d32/ffffff?text=EngiFlow" alt="EngiFlow - Engineering Workflow" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge engineering-badge">Engineering</div>
+                            <h3>EngiFlow</h3>
+                            <p class="project-description">Complete engineering project management solution for construction and manufacturing firms. Features CAD integration, resource allocation, and real-time collaboration tools.</p>
+                            <div class="project-tech">
+                                <span>Angular</span>
+                                <span>.NET Core</span>
+                                <span>AutoCAD API</span>
+                                <span>Azure</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>500+ Projects</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-clock"></i>
+                                    <span>30% Time Savings</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item engineering" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/5d4037/ffffff?text=AutoDesign" alt="AutoDesign - Automotive CAD" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge engineering-badge">Engineering</div>
+                            <h3>AutoDesign</h3>
+                            <p class="project-description">Revolutionary automotive design platform with AI-powered suggestions and real-time 3D modeling capabilities. Used by leading automotive manufacturers worldwide.</p>
+                            <div class="project-tech">
+                                <span>React 3D</span>
+                                <span>TensorFlow</span>
+                                <span>WebGL</span>
+                                <span>Google Cloud</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-car"></i>
+                                    <span>15 Major Clients</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-rocket"></i>
+                                    <span>AI-Powered</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beauty & Wellness Projects -->
+            <div class="portfolio-grid" id="beauty-projects">
+                <div class="portfolio-item beauty" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/c2185b/ffffff?text=BeautyHub" alt="BeautyHub - Salon Management" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge beauty-badge">Beauty</div>
+                            <h3>BeautyHub</h3>
+                            <p class="project-description">Complete beauty salon and spa management system. Features online booking, customer management, inventory tracking, and marketing automation.</p>
+                            <div class="project-tech">
+                                <span>React Native</span>
+                                <span>Express.js</span>
+                                <span>MongoDB</span>
+                                <span>Stripe</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>50,000+ Bookings</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-percentage"></i>
+                                    <span>25% Revenue Growth</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item beauty" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/7b1fa2/ffffff?text=Wellness+Tracker" alt="Wellness Tracker - Health App" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge beauty-badge">Beauty</div>
+                            <h3>Wellness Tracker</h3>
+                            <p class="project-description">Personal wellness and fitness tracking application with AI-powered health insights, personalized workout plans, and nutrition guidance.</p>
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>Python</span>
+                                <span>Firebase</span>
+                                <span>Apple HealthKit</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-heart"></i>
+                                    <span>100,000+ Downloads</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-apple-alt"></i>
+                                    <span>Health Integration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Projects -->
+            <div class="portfolio-grid" id="travel-projects">
+                <div class="portfolio-item travel" data-aos="fade-up" data-aos-delay="700">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/0277bd/ffffff?text=TravelEase" alt="TravelEase - Booking Platform" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge travel-badge">Travel</div>
+                            <h3>TravelEase</h3>
+                            <p class="project-description">Comprehensive travel booking platform with AI-powered recommendations, real-time pricing, and seamless multi-destination planning.</p>
+                            <div class="project-tech">
+                                <span>Next.js</span>
+                                <span>GraphQL</span>
+                                <span>Airline APIs</span>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-plane"></i>
+                                    <span>1M+ Bookings</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-globe"></i>
+                                    <span>50+ Countries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item travel" data-aos="fade-up" data-aos-delay="800">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/ef6c00/ffffff?text=LocalGuide" alt="LocalGuide - Tour App" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge travel-badge">Travel</div>
+                            <h3>LocalGuide</h3>
+                            <p class="project-description">Local tour guide application connecting travelers with certified local guides. Features real-time chat, location sharing, and cultural insights.</p>
+                            <div class="project-tech">
+                                <span>React Native</span>
+                                <span>Socket.io</span>
+                                <span>Google Maps API</span>
+                                <span>Twilio</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <span>10,000+ Guides</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-comments"></i>
+                                    <span>Real-time Chat</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rental Projects -->
+            <div class="portfolio-grid" id="rental-projects">
+                <div class="portfolio-item rental" data-aos="fade-up" data-aos-delay="900">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/33691e/ffffff?text=RentSmart" alt="RentSmart - Property Management" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge rental-badge">Rental</div>
+                            <h3>RentSmart</h3>
+                            <p class="project-description">Smart property management platform for landlords and tenants. Features automated rent collection, maintenance requests, and tenant screening.</p>
+                            <div class="project-tech">
+                                <span>Vue.js</span>
+                                <span>Node.js</span>
+                                <span>Plaid API</span>
+                                <span>Property APIs</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-building"></i>
+                                    <span>5,000+ Properties</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>95% Payment Success</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item rental" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/4e342e/ffffff?text=CarShare" alt="CarShare - Vehicle Rental" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge rental-badge">Rental</div>
+                            <h3>CarShare</h3>
+                            <p class="project-description">Peer-to-peer car sharing platform with GPS tracking, insurance integration, and automated payment processing. Redefining urban mobility.</p>
+                            <div class="project-tech">
+                                <span>React Native</span>
+                                <span>Express.js</span>
+                                <span>GPS APIs</span>
+                                <span>Stripe Connect</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-car"></i>
+                                    <span>2,000+ Vehicles</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Insurance Included</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Projects -->
+            <div class="portfolio-grid" id="education-projects">
+                <div class="portfolio-item education" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/1565c0/ffffff?text=EduConnect" alt="EduConnect - Learning Platform" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge education-badge">Education</div>
+                            <h3>EduConnect</h3>
+                            <p class="project-description">Comprehensive e-learning platform with interactive courses, progress tracking, and AI-powered personalized learning paths for students of all ages.</p>
+                            <div class="project-tech">
+                                <span>Angular</span>
+                                <span>Python</span>
+                                <span>AI/ML</span>
+                                <span>Video Streaming</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>50,000+ Students</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-brain"></i>
+                                    <span>AI-Powered</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item education" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="portfolio-card glassmorphism-apple">
+                        <div class="portfolio-image">
+                            <img src="https://placehold.co/600x400/2e7d32/ffffff?text=CampusLife" alt="CampusLife - School Management" loading="lazy">
+                            <div class="image-overlay">
+                                <a href="#" class="btn btn-primary interactive-button view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <div class="project-badge education-badge">Education</div>
+                            <h3>CampusLife</h3>
+                            <p class="project-description">Complete school management system for administrators, teachers, and parents. Features attendance tracking, grade management, and communication tools.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Push Notifications</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-school"></i>
+                                    <span>100+ Schools</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Parent App</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section alt-background">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Client Testimonials</h2>
+            <p class="section-subtitle" data-aos="fade-up">Hear what our clients have to say about our work</p>
+            
+            <div class="row testimonials-grid">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card glassmorphism-apple">
+                        <div class="testimonial-content">
+                            <p>"praixTECH transformed our medical practice with their MediCare Plus platform. The user experience is exceptional, and our patients love the convenience."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://placehold.co/60x60/004d40/ffffff?text=DR" alt="Dr. Sarah Johnson" class="author-avatar">
+                            <div class="author-info">
+                                <h5>Dr. Sarah Johnson</h5>
+                                <p>Medical Director, HealthPlus Clinic</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card glassmorphism-apple">
+                        <div class="testimonial-content">
+                            <p>"The EngiFlow system has revolutionized our engineering workflow. Project completion times have improved by 30%, and collaboration is seamless."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://placehold.co/60x60/2e7d32/ffffff?text=MR" alt="Michael Chen" class="author-avatar">
+                            <div class="author-info">
+                                <h5>Michael Chen</h5>
+                                <p>CTO, BuildTech Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card glassmorphism-apple">
+                        <div class="testimonial-content">
+                            <p>"BeautyHub has increased our booking efficiency by 40% and improved customer satisfaction. The team's attention to detail is outstanding."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://placehold.co/60x60/c2185b/ffffff?text=MS" alt="Lisa Rodriguez" class="author-avatar">
+                            <div class="author-info">
+                                <h5>Lisa Rodriguez</h5>
+                                <p>Owner, Elegant Beauty Salon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="portfolio-cta" class="section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8" data-aos="fade-right">
+                    <h2 class="cta-title">Ready to Start Your Project?</h2>
+                    <p class="cta-subtitle">Let's discuss how we can bring your vision to life with our proven expertise and innovative solutions.</p>
+                </div>
+                <div class="col-md-4 text-md-right" data-aos="fade-left">
+                    <a href="index.html#contact" class="btn btn-primary interactive-button cta-button">Get In Touch</a>
+                    <a href="index.html" class="btn btn-secondary interactive-button cta-button-secondary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-container py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-around align-items-center">
+            <div class="footer-section text-center mb-3 mb-md-0">
+                <img src="praixTech.png" alt="praixTech Logo" class="footer-logo mb-2">
+                <p class="praix">Creativity beyond Imagination</p>
+            </div>
+            <div class="vertical-line mx-4 d-none d-md-block"></div>
+            <ul class="list-unstyled list-style text-center text-md-left mb-3 mb-md-0">
+                <li><a href="index.html#graphic-design" class="praix-link">Graphics Design</a></li>
+                <li><a href="index.html#web-development" class="praix-link">Web and App Development</a></li>
+                <li><a href="index.html#product-design" class="praix-link">Product Design</a></li>
+                <li><a href="index.html#online-marketing" class="praix-link">Online Marketing</a></li>
+                <li><a href="index.html#contact" class="praix-link">Contact Us</a></li>
+            </ul>
+            <div class="vertical-line mx-4 d-none d-md-block"></div>
+            <div class="footer-section text-center text-md-left">
+                <h5>Get In Touch</h5>
+                <p class="praix">No 5 Alayande Compound,<br>Orita-Naira, Ogbomoso</p>
+                <p class="mb-1">
+                    <a href="tel:09045048954">+234(0) 90-450-489-54</a><br>
+                    <a href="tel:+2348164208524">+234(0) 816-420-8524</a>
+                </p>
+                <p>Click to send a mail to<br><a href="mailto:praiseola22@gmail.com" class="praix-link">praiseola22@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p class="praix copyright">&copy; <span id="current-year"></span> praixTECH. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoJtKh7z7lGz7fuP4F8nfdFvAOA6Ww+6QwVBIId2e5j5uISQiZf" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Tawk.to Live Chat -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/66ae153d1601a2195ba05989/1i4c05usl';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
 </body>
 </html>
